@@ -1,2 +1,2 @@
-# php
-PHP practice
+# dynamic astro
+Astro SSR
