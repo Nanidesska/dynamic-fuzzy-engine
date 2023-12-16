@@ -1,2 +1,0 @@
-# dynamic astro
-Astro SSR
