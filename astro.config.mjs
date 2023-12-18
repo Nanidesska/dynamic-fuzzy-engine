@@ -8,7 +8,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://nani-sebastian.com',
-	//output: 'server',
-	//adapter: vercel(),
+	output: 'server',
+	adapter: vercel(),
 	integrations: [mdx(), sitemap()],
 });
