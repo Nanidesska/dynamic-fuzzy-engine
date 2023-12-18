@@ -19,3 +19,48 @@
     background: none;
     align-items: left;
 }
+
+.timeline-dash-phone1 {
+    width: calc(100%/2);
+    height: 40rem;
+    border-right: 3px dashed white;
+    
+    margin-left: 1.5px;
+    
+    background: none;
+    align-items: left;
+
+    @media (min-width: 400px) {
+        height: 48rem;
+    }
+}
+
+.timeline-dash-phone2 {
+    width: calc(100%/2);
+    height: 40rem;
+    border-right: 3px dashed white;
+    
+    margin-left: 1.5px;
+    
+    background: none;
+    align-items: left;
+
+    @media (min-width: 400px) {
+        height: 48rem;
+    }
+}
+
+.timeline-dash-phone3 {
+    width: calc(100%/2);
+    height: 35rem;
+    border-right: 3px dashed white;
+    
+    margin-left: 1.5px;
+    
+    background: none;
+    align-items: left;
+
+    @media (min-width: 400px) {
+        height: 42rem;
+    }
+}

@@ -1,0 +1,182 @@
+---
+import Layout from '../layouts/Layout.astro';
+export const prerender = true;
+---
+
+<Layout
+	title="Timeline"
+	siteheader="sh-timeline"
+>
+
+	<section class="hero | section | body_web" style="background: rgb(22, 21, 21); padding-top: 10rem; padding-bottom: 10rem">
+		<div class="container" data-type="wide">
+			<h1 class="heading-1">
+				<div class="ff-neon-pink" style="font-family: Herr von Muellerhoff">
+					Timeline
+				</div>
+	  		</h1>
+		</br>
+		<div class="row">
+			<div class="uneven-column left" style="">
+				<div class="">
+					<div class=" imagecenter" style="margin-top: 2rem;">
+						<div class="timeline-dot">
+						</div>
+					</div>
+					<div class="timeline-dash" style="height:38rem;">
+					</div>
+					<div class=" imagecenter" style="">
+						<div class="timeline-dot">
+						</div>
+					</div>
+					<div class="timeline-dash" style="height:36.5rem;">
+					</div>
+					<div class=" imagecenter" style="">
+						<div class="timeline-dot">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ff-text-main | uneven-column right">
+				<h3 class="heading-3 | clr-neutral-000">
+					3:00 pm: Church St. Martin in Flintsbach a. Inn
+				</h3>
+				<p class="ff-text-main" style="padding-top: 1rem;">
+					FLints Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+					labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
+					viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
+				</p>
+				<div class="" style="padding-bottom: 4rem; text-align: left;">
+					<div class="timeline1" style="margin-left: 0;"></div>
+				</div>	
+
+				<h3 class="heading-3 | clr-neutral-000">
+					5:00 pm: Wendelsteinbahn in Brannenburg
+				</h3>
+				<p class="ff-text-main" style="padding-top: 1rem;">
+					FLints Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+					labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
+					viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
+				</p>
+
+				<div class="" padding-bottom: 4rem; style="padding-bottom: 4rem; text-align: left;">
+					<div class="timeline2" style="margin-left: 0;"></div>
+				</div>
+
+				<h3 class="heading-3 | clr-neutral-000">
+					5:30 pm: Wendelsteinhaus
+				</h3>
+				<p class="ff-text-main" style="padding-top: 1rem;">
+					FLints Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+					labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
+					viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
+				</p>
+
+				<div class="" style="text-align: left;">
+					<div class="timeline3" style="margin-left: 0;"></div>
+				</div>
+
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	
+	<script>
+		let stichpunkt1 = document.getElementById('3pm');
+		let stichpunkt2 = document.getElementById('5pm');
+		let position1 = stichpunkt1?.offsetTop  ;
+		let position2 = stichpunkt2.offsetTop ;
+		let height3= position2-position1 + "px";
+		
+
+		let text_phone_1 = document.getElementById('text_phone_1');
+		let height1 = (text_phone_1.offsetHeight) + "px" ;
+
+		let text_phone_2 = document.getElementById('text_phone_2');
+		let height2 = (text_phone_2.scrollHeight) + "px" ;
+		
+		document.getElementById("dash1").style.height = height3;
+		document.getElementById("dash2").style.height = height2;
+	
+	</script>
+
+	<section class="hero | section | body_phone" style="background: rgb(56, 54, 54); padding-top: 5rem; padding-bottom: 5rem">
+		<div class="container" data-type="">
+		<div class="row">
+			<div class="uneven-column left_1" style="">
+				<div class="">
+					<div class=" imagecenter" style="margin-top: 8rem;">
+						<div class="timeline-dot" style="width:1rem; height:1rem;">
+						</div>
+					</div>
+					<div id="">
+					<div class="timeline-dash-phone" id="dash1" style="height:10rem;">
+					</div>
+					</div>
+					<div class=" imagecenter" style="">
+						<div class="timeline-dot" style="width:1rem; height:1rem;">
+						</div>
+					</div>
+					<div class="timeline-dash-phone" id="dash2" style="height:38rem;" >
+					</div>
+					<div class=" imagecenter" style="">
+						<div class="timeline-dot" style="width:1rem; height:1rem;">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ff-text-main | uneven-column right_1">
+				<h1 class="heading-1">
+					<div class="ff-neon-pink" style="font-family: Herr von Muellerhoff; margin-top: 1rem; margin-bottom: 2rem;">
+						Timeline
+					</div>
+				</h1>
+			<div id="text_phone_1">
+				<h3 class="heading-3 | clr-neutral-000" id="3pm" style="font-size:1.3rem; margin-top: 0.2rem; margin-bottom: 0.2rem;">
+					3:00 pm: Church St. Martin in Flintsbach a. Inn
+				</h3>
+				<p class="ff-text-main" style="padding-top: 1rem;">
+					FLints Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+					labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
+					viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
+				</p>
+				<div class="" style="padding-bottom: 4rem; text-align: left;">
+					<div class="timeline1" style="margin-left: 0; width: 17rem;"></div>
+				</div>	
+			</div>
+			<div id="text_phone_2">
+				<h3 class="heading-3 | clr-neutral-000" id="5pm" style="font-size:1.3rem; margin-top: 0.2rem; margin-bottom: 0.2rem;">
+					5:00 pm: Rail station in Brannenburg
+				</h3>
+				<p class="ff-text-main" style="padding-top: 1rem; ">
+					FLints Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+					labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
+					viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
+				</p>
+
+				<div class="" style="padding-bottom: 4rem; text-align: left; ">
+					<div class="timeline2" style="margin-left: 0; width: 17rem;"></div>
+				</div>
+			
+				<h3 class="heading-3 | clr-neutral-000" id="5_30pm" style="font-size:1.3rem; margin-top: 0.2rem; margin-bottom: 0.2rem;">
+					5:30 pm: Wendelsteinhaus
+				</h3>
+			</div>
+				<p class="ff-text-main" style="padding-top: 1rem;">
+					FLints Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+					labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
+					viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
+				</p>
+
+				<div class="" style="text-align: left;">
+					<div class="timeline3" style="margin-left: 0; width: 17rem;"></div>
+				</div>
+
+				</div>
+			</div>
+		</div>
+		</div>	
+	</section>
+
+</Layout>

@@ -9,14 +9,24 @@
 
 .ff-text-main {
   color: $clr-neutral-000;
-  font-size: 1rem; 
-  line-height: 2.2rem; 
+  font-size: 16px; 
+  line-height: 35.2px; 
 }
 
 .ff-text-main-black {
   color: $clr-neutral-900;
   font-size: 1rem; 
   line-height: 2.2rem; 
+}
+
+.ff-escape {
+    display: inline-block;
+    text-align: center;
+    transition: transform 0.2s;
+    
+    &:is(:hover, :focus) {
+      transform: translate(300px, 0px);
+    }
 }
 
 .ff-red-circle {
@@ -31,6 +41,30 @@
     height: 35px;
     text-align: center;
     box-shadow: 1px -1px 5px rgb(155, 155, 155), -1px -1px 1px rgb(193, 192, 192), 3px 3px 3px rgb(55, 55, 55), 1px 1px 1px rgb(19, 19, 19), 5px 5px 3px rgb(136, 136, 136);
+    transition: transform .3s ease-out;
+    animation: flyup 1s ;
+}
+
+.ff-red-circle:nth-child(1) {
+  animation-delay: 0s;
+}
+.ff-red-circle:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.ff-red-circle:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.ff-red-circle:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.ff-red-circle:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.ff-red-circle:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.ff-red-circle:nth-child(7) {
+  animation-delay: 0.6s;
 }
 
 .ff-red-circle-small {
@@ -45,6 +79,30 @@
     height: 27px;
     text-align: center;
     box-shadow: 1px -1px 5px rgb(155, 155, 155), -1px -1px 1px rgb(193, 192, 192), 3px 3px 3px rgb(55, 55, 55), 1px 1px 1px rgb(19, 19, 19), 5px 5px 3px rgb(136, 136, 136);
+    transition: transform .3s ease-out;
+    animation: flyup 1s ;
+}
+
+.ff-red-circle-small:nth-child(1) {
+  animation-delay: 0s;
+}
+.ff-red-circle-small:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.ff-red-circle-small:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.ff-red-circle-small:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.ff-red-circle-small:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.ff-red-circle-small:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.ff-red-circle-small:nth-child(7) {
+  animation-delay: 0.6s;
 }
 
 .ff-flash {
@@ -187,4 +245,14 @@
       
     line-height: 30px;
       box-shadow: -1px -1px 5px rgb(255, 234, 0), 1px 1px 10px rgb(255, 225, 0), 1px 1px 5px rgb(255, 225, 0), 1px 1px 10px rgb(255, 225, 0), 1px 1px 5px rgb(255, 225, 0); }
+}
+
+@keyframes flyup {
+  0% { transform: translate(0px, -500px);}
+  100% { transform: translate(0px, 0px);}
+}
+
+@keyframes escape {
+  0% { transform: translate(0px, 0px);}
+  100% { transform: translate(200px, 0px);}
 }
