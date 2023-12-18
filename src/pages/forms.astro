@@ -17,7 +17,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
         </div>
       </div>
       <div class="inner__form space-content" style="font-family: Cinzel">
-        <form class="login-form space-content" method="post" id="guestSurvey" action="/guestsurvey">
+        <form class="login-form space-content" method="POST" id="guestSurvey" action="/guestsurvey">
           <div class="login-form__controls">
                 <label for="name" id="label-name">
 				            <div style="font-family: Cinzel">Full name *</div>
@@ -26,7 +26,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
 
                 <p style=“line-height: 80%“></br></p>
 
-                <label id="join">
+                <label id="label-join">
                     <div style="font-family: Cinzel">Are you joining our wedding? *
                     </div>
                 </label>
@@ -131,10 +131,13 @@ import FormsLayout from '../layouts/FormsLayout.astro';
 
 </script>
 
-<style lang="scss">
+<style lang="scss" is:global>
 @use '../abstracts/breakpoints' as *;
 @use '../abstracts/sizes' as *;
 @use '../base/space' as *;
+@use '../base/border' as *;
+@use '../base/space' as *;
+  
 
 .login {
   
@@ -218,11 +221,9 @@ import FormsLayout from '../layouts/FormsLayout.astro';
     transform: translateY(0);
   }
 }
-</style>
+
   
-  <style lang="scss" is:global>
-    @use '../base/border' as *;
-    @use '../base/space' as *;
+  
   
     .login-form {
       label {

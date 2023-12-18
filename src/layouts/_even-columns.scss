@@ -9,3 +9,25 @@
     grid-auto-columns: 1fr;
   }
 }
+
+.row {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.uneven-column {
+  float: left;
+  
+  
+}
+
+.left {
+  width: 25%;
+  padding: 1.3rem;
+}
+
+.right {
+  width: 75%;
+  padding: 1.3rem;
+}

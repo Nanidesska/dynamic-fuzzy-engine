@@ -2,14 +2,14 @@
 
 .timeline1 {
     color: $site-header-color;
-    content: url('/Kirche.jpeg');
+    content: url('/Flintsbach.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 5%;
-    width: 700px;
+    margin: 1.5rem;
+    width: 600px;
 
     @media (max-device-width:700px) {
-      width: 300px;
+      width: 400px;
     }
   }
 
@@ -18,8 +18,8 @@
     content: url('/Wendelsteinbahn.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
-    margin: 5%;
-    width: 700px;
+    margin: 1.5rem;
+    width: 600px;
     
     @media (max-device-width:700px) {
       width: 300px;
@@ -27,14 +27,16 @@
   }
 
 .timeline3 {
-    color: $site-header-color;
-    background-image: url('/Wendelstein3.jpeg');
-    background-repeat: no-repeat;
-    
-    padding: $site-header-padding;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    height: 500px;
+  color: $site-header-color;
+  content: url('/Wendelstein.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 1.5rem;
+  width: 600px;
+  
+  @media (max-device-width:700px) {
+    width: 300px;
+  }
   }
 
 .lasvegashome {

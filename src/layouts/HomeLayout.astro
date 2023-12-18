@@ -1,6 +1,7 @@
 ---
 import "../main.scss";
 const { title } = Astro.props;
+export const prerender = true;
 
 import '@fontsource/twinkle-star';
 import '@fontsource/dancing-script';
@@ -15,7 +16,6 @@ import '@fontsource/cinzel';
 import '@fontsource/bodoni-moda';
 import '@fontsource/monofett';
 import '@fontsource/great-vibes';
-
 ---
 
 <!DOCTYPE html>
@@ -34,9 +34,7 @@ import '@fontsource/great-vibes';
 </head>
 
 <body>
-  <?php ;
-    include "output.php";
-  ?>
+  
 <div class="body_web">
     <header class="site-header" style="" >
       <div class="container" style="">
@@ -152,8 +150,8 @@ import '@fontsource/great-vibes';
             </div>
           </h2>
           <ol class="list_roman" style="margin-left:0; list-style-type:none; line-height:1;">
-            <li>When: 17th of August 2024, 3 pm - 12 am</li>
-            <li>Where: Church St.Martin & Wendelsteinhaus</li>
+            <li>When: 3 pm - 12 am, 17th of August 2024</li>
+            <li>Where: Church St. Martin & Wendelsteinhaus</li>
           </ol>
       </div>
       </div>
@@ -272,7 +270,7 @@ import '@fontsource/great-vibes';
   </div>
 
 <img src="" height="100"/>
-<footer class="site-footer" style="padding-top: 3rem; padding-bottom: 3rem;">
+<footer class="site-footer" style="padding-top: 3rem; padding-bottom: 3rem; background: rgba(58,58,58,0.9);">
 <section class="section | clr-neutral-000 ">
   <div class="container" data-type="narrow">
     
@@ -285,8 +283,8 @@ import '@fontsource/great-vibes';
           </h2>
         
           <ol class="list_roman" style="margin-left:0; list-style-type:none; line-height:1;">
-            <li>When: 17th of August 2024, 3 pm - 12 am</li>
-            <li>Where: Church St.Martin & Wendelsteinhaus</li>
+            <li>When: 3 pm - 12 am, 17th of August 2024</li>
+            <li>Where: Church St. Martin & Wendelsteinhaus</li>
           </ol>
         
       
