@@ -1,0 +1,108 @@
+---
+import { Notification } from 'accessible-astro-components'
+import { Icon } from 'astro-icon'
+import LoginLayout from '../layouts/LoginLayout.astro'
+---
+
+<form class="login-form space-content" method="post">
+  <Notification type="warning">
+    <Icon pack="majesticons" name="emoji-sad-line" /><p class="size-12">Incorrect email and password combination. Please try again.</p>
+  </Notification>
+  <div class="login-form__controls">
+    <label for="password"><div style="font-family: Cinzel">Password</div></label>
+    <div style="font-family:none;"><input type="password" name="password" required></div>
+  </div>
+  <p style=“line-height: 80%“></p>
+  <button class="" type="submit">
+    <div style="font-family: Cinzel" class="accentbuttonbox">
+    Login
+  </div>
+  </button>
+  <p style=“line-height: 80%“></p>
+  <label class="checkbox">
+    <input type="checkbox" name="remember">
+    <span><div style="font-family: Cinzel">Remember me</div></span>
+  </label>
+  <a href="/forgotpassword">Forgot password?</a>
+</form> 
+
+<script>
+  // variables
+  const form = document.querySelector('.login-form')
+  const notification = form.querySelector('.notification')
+  const emailInput = form.querySelector('input[name="email"]')
+  const passwordInput = form.querySelector('input[name="password"]')
+  const submitButton = form.querySelector('button')
+
+  // execution
+  notification.style.display = 'none'
+
+  submitButton.addEventListener('click', event => {
+    event.preventDefault()
+
+    if (passwordInput.value === 'Wendelstein2024') {
+      localStorage.setItem('isLoggedIn', 'true')
+      window.location.href = '/'
+    } else {
+      window.location.href = '/login_wrong_password'
+    }
+  })
+</script>
+
+<style lang="scss" is:global>
+  @use '../base/border' as *;
+  @use '../base/space' as *;
+
+  .login-form {
+    label {
+      display: block;
+      margin-bottom: $space-8;
+    }
+
+    input {
+      width: 100%;
+      @include radius-small;
+    }
+
+    input {
+      padding: 0.4em 2.4em;
+      border: 0;
+      border-radius: 0.25rem;
+      background-color: var(--neutral-100);
+      
+        &:is(:focus, :active) {
+        background-color: var(--neutral-200, #f6f8f9);
+        color: var(--accent-400);
+        border-color: 0;
+        border: 0;
+  }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      
+      color: var(--neutral-900, #202427);
+      background-color: var(--neutral-200, #f6f8f9);
+      border: 0;
+      border-radius: 0.25rem;
+
+      &:is(:hover, :focus, :active) {
+        background-color: var(--accent-100);
+        color: var(--neutral-600);
+        border-color: var(--neutral-600);
+  }
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+      gap: $space-4;
+
+      input {
+        width: auto;
+      }
+    }
+  }
+</style>

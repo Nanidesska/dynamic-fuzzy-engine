@@ -1,0 +1,20 @@
+@use "../abstracts/" as *;
+
+.list_roman {
+    margin: 35px; 
+    margin-left: 50px; 
+    list-style-type: upper-roman;
+    color: $clr-neutral-000;
+    font-size: 1rem; 
+    line-height: 2.2rem; 
+    
+
+    li {
+        margin-top: 1rem; 
+    }
+    
+    li span {
+        left: 10px;
+        
+      }
+}

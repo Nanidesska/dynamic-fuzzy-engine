@@ -1,0 +1,276 @@
+---
+import FormsLayout from '../layouts/FormsLayout.astro';
+---
+
+<FormsLayout title="Guest survey">
+</br></br></br></br></br>
+<section class="bg-neutral-000">
+  <div class="login">
+    <div class="login__inner reveal h-screen">
+      <div class="inner__brand">
+        <div class="brand__text" style="font-family: Cinzel">
+          
+            <span>Guest survey</span><br>
+            <span> To make the best out of the day, some major information on your attendance would be helpful. Thank you for your participation.</span>
+          
+        </div>
+      </div>
+      <div class="inner__form space-content" style="font-family: Cinzel">
+        <form class="login-form space-content" method="post">
+          <div class="login-form__controls">
+                <label for="name" id="label-name">
+				            <div style="font-family: Cinzel">Full name *</div>
+			          </label>
+			          <div style="font-family:none;"> <input type="text" id="name" required /></div>
+
+                <p style=“line-height: 80%“></br></p>
+
+                <label id="join">
+                    <div style="font-family: Cinzel">Are you joining our wedding? *
+                    </div>
+                </label>
+                <select name="join" id="join" required>
+                  <option disabled value="">--Please choose an option--</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <p style=“line-height: 80%“></br></p>
+
+                <label for="partner" id="label-partner">
+                    <div style="font-family: Cinzel">Are you bringing your partner? *</div>
+                </label>
+                <select name="partner" id="label-partner" required>
+                  <option disabled value="">--Please choose an option--</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No1">No, I am single :)</option>
+                    <option value="No2">No</option>
+                </select>
+
+                <p style=“line-height: 80%“></br></p>
+
+                <label for="children" id="label-children">
+                    <div style="font-family: Cinzel"> Are you bringing your child(ren)? *</div>
+                </label>
+                <select name="children" id="children" required>
+                  <option disabled value="">--Please choose an option--</option>
+                    <option value="No">No</option>
+                    <option value="Yes1">Yes, 1</option>
+                    <option value="Yes2">Yes, 2</option>
+                    <option value="Yes3">Yes, 3</option>
+                </select>
+
+                <p style=“line-height: 80%“></p>
+  
+                <label for="childrenage" id="label-childrenage">
+                <div class="clr-neutral-400" style="font-family: Cinzel">If yes, how old?</div>
+			          </label>
+                
+			          <div style="font-family:none;"> 
+                  <input type="text" name="childrenage" id="childrenage" />
+                </div>
+              
+                <p style=“line-height: 80%“></br></p>
+
+                <label for="hotel" id="label-hotel">
+                    <div style="font-family: Cinzel"> Do you want to have a hotel room near Flintsbach? *</div>
+                </label>
+                <select name="hotel" id="hotel" required >
+                  <option disabled value="">--Please choose an option--</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <p style=“line-height: 80%“></br></p>
+
+                <label for="food" id="label-food">
+				        <div style="font-family: Cinzel">Let us know if you have any dining specification(s) including intolerance for spicy food.</div>
+			          </label>
+			          <div style="font-family:none;"> <input type="text" name="food" id="food" /></div>
+
+                <p style=“line-height: 80%“></br></p>
+                
+                <button class="" type="submit" value="submit">
+                    <div style="font-family: Cinzel" class="accentbuttonbox">
+                          Submit
+                    </div>
+                </button>
+          </div>
+        </form> 
+    </div>
+    <div class="login__footer text-neutral-700 ">
+        <h5 class="heading-5" style="font-family: Cinzel">
+        <span>Thank you!</span>
+        </h5>
+    </div>
+    <div class="login__background h-screen" />
+    </div>
+</div>
+</div>
+</section>
+</br></br></br></br>
+</FormsLayout>
+
+<script>
+    const form = document.querySelector('.login-form')
+    const childreninput = form.querySelector('select[name="children"]')
+    const childrenageinput = form.querySelector('input[name="childrenage"]')
+    const submitButton = form.querySelector('button')
+
+    if (childreninput.value == 'No'){
+      childrenageinput.setAttribute('','')
+    } else {
+      childrenageinput.setAttribute('required','')
+    }
+
+    
+
+</script>
+
+<style lang="scss">
+@use '../abstracts/breakpoints' as *;
+@use '../abstracts/sizes' as *;
+@use '../base/space' as *;
+
+.login {
+  
+  background-color: var(--neutral-000);
+  grid-template-columns: 700px 2fr;
+
+  .login__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: $space-48;
+    padding: $space-48;
+    z-index: 1;
+    background-color: var(--neutral-000);
+    
+    @include breakpoints(medium) {
+      padding: $space-48 $space-96;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .inner__brand {
+    display: flex;
+    align-items: center;
+    gap: $space-16;
+  }
+
+  .brand__logo {
+    max-width: 50px;
+  }
+
+  .brand__text {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+
+    > :first-child {
+      font-weight: bold;
+      @include size-20;
+    }
+
+    > :last-child {
+      @include size-14;
+    }
+  }
+
+  .login__background {
+    display: none;
+    background-color: transparent;
+    //background-image: url("/Wendelstein.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include breakpoints(medium) {
+      display: block;
+    }
+  }
+
+  .reveal {
+    animation: reveal 0.3s ease-in;
+  }
+
+  .login__footer {
+    padding-bottom: $space-24;
+
+    @include breakpoints(medium) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+  
+  <style lang="scss" is:global>
+    @use '../base/border' as *;
+    @use '../base/space' as *;
+  
+    .login-form {
+      label {
+        display: block;
+        margin-bottom: $space-8;
+        
+      }
+  
+      input {
+        width: 100%;
+        @include radius-small;
+      }
+  
+      input {
+        padding: 0.4em 2.4em;
+        border: 0;
+        border-radius: 0.25rem;
+        background-color: var(--neutral-100);
+        
+          &:is(:focus, :active) {
+          background-color: var(--neutral-200, #f6f8f9);
+          color: var(--accent-400);
+          border-color: 0;
+          border: 0;
+    }
+      }
+  
+      button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        
+        color: var(--neutral-900, #202427);
+        background-color: var(--neutral-200, #f6f8f9);
+        border: 0;
+        border-radius: 0.25rem;
+  
+        &:is(:hover, :focus, :active) {
+          background-color: var(--accent-100);
+          color: var(--neutral-600);
+          border-color: var(--neutral-600);
+    }
+      }
+  
+      .checkbox {
+        display: flex;
+        align-items: center;
+        gap: $space-4;
+  
+        input {
+          width: auto;
+        }
+      }
+    }
+  </style>

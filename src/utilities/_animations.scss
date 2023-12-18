@@ -1,0 +1,54 @@
+@use "../abstracts/" as *;
+
+.fade-in-text-2 {
+    animation: fadeIn 2s;
+}
+
+.fade-in-text-3 {
+    animation: fadeIn90 3s;
+}
+
+.fade-in-text-5 {
+    animation: fadeIn 5s;
+}
+
+.fade-in-text-10 {
+    animation: fadeIn 10s;
+}
+
+.fade-in-text-15 {
+    animation: fadeIn 15s;
+}
+
+.fade-in {
+    animation: fadeIn 10s;
+    animation-iteration-count: infinite;
+}
+
+.salto {
+    list-style: none;
+  
+    a {
+      transition: transform .3s ease-out;
+      display: inline-block;
+  
+      &:is(:hover, :focus) {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeIn90 {
+    0% { opacity: 0; }
+    100% { opacity: 0.9; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}

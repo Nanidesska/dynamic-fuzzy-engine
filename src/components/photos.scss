@@ -1,0 +1,63 @@
+@use "../abstracts" as *;
+
+.timeline1 {
+    color: $site-header-color;
+    content: url('/Kirche.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5%;
+    width: 700px;
+
+    @media (max-device-width:700px) {
+      width: 300px;
+    }
+  }
+
+.timeline2 {
+    color: $site-header-color;
+    content: url('/Wendelsteinbahn.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5%;
+    width: 700px;
+    
+    @media (max-device-width:700px) {
+      width: 300px;
+    }
+  }
+
+.timeline3 {
+    color: $site-header-color;
+    background-image: url('/Wendelstein3.jpeg');
+    background-repeat: no-repeat;
+    
+    padding: $site-header-padding;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    height: 500px;
+  }
+
+.lasvegashome {
+    color: $site-header-color;
+    width: 470px;
+    background-image: url('/lasvegas.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 75%;
+    
+    padding-bottom: 3.5rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+
+    @media (max-device-width: 1100px) {
+      width: 360px;
+      background-position: 50% 65%;
+      background-size:contain;
+      
+      padding-bottom: 3.6rem;
+      margin-bottom: 0.5rem;
+      margin-left: 0rem;
+      
+      
+    }
+  }

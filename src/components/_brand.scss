@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.brand {
+    background-color: $bg-brand-primary-700;
+    color: $clr-brand-accent-400;
+
+  a {
+    color: $link-brand-neutral-100;
+
+    &:is(:hover, :focus) {
+      color: $navigation-color-hover;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.imagecenter {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  vertical-align: middle;
+}
+.imageright {
+  display: flex; 
+justify-content: right; 
+  align-items: right;
+  vertical-align: middle;
+}
+.imageleft {
+  display: flex; 
+  justify-content: left; 
+  align-items: left;
+  vertical-align: middle;
+}

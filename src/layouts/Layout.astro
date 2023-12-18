@@ -1,0 +1,208 @@
+---
+import "../main.scss";
+const { title, siteheader } = Astro.props;
+
+import '@fontsource/twinkle-star';
+import '@fontsource/dancing-script';
+import '@fontsource/herr-von-muellerhoff';
+import '@fontsource/monoton';
+import '@fontsource/codystar';
+import '@fontsource/caveat';
+import '@fontsource/yanone-kaffeesatz';
+import '@fontsource/pinyon-script';
+import '@fontsource/cinzel-decorative';
+import '@fontsource/cinzel';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="images/png+xml" href="herz gelb.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>{title}</title>
+  <link rel="stylesheet" href="/src/main.scss">
+</head>
+
+<body>
+  <div class="" >
+  <header class={siteheader}>
+    <div class="flow">
+      
+        <img src="" height="100"/>
+        <div class="flow">
+          <img src="" height="10"/>
+          <div class="menu-leiste"></div>
+          <div class="menu-btn ">
+            <div class="btn-line" style="background: rgba(255, 255, 255, 0.543)"></div>
+            <div class="btn-line" style="background: rgba(255, 255, 255, 0.543)"></div>
+            <div class="btn-line" style="background: rgba(255, 255, 255, 0.543)"></div>
+          </div>
+        <nav class="menu | fade-in-text-2" >
+          <img src="" height="100">
+          
+          <ul class="ff-flash | menu-nav | flip-menu-blackbox | body_web" style="">
+    
+            <li class="nav-item ">
+              <a href="/" style="font-family: Codystar" class="heading-3">Home</a>
+            </li>
+    
+            <li class="nav-item">
+              <a href="/guestsurvey" style="font-family: Codystar" class="heading-3">Guest Survey</a>
+            </li>
+    
+            <li class="nav-item">
+              <a href="/location" style="font-family: Codystar" class="heading-3">Location</a>
+            </li>
+    
+            <li class="nav-item">
+              <a href="/timeline" style="font-family: Codystar" class="heading-3">Timeline</a>
+            </li>
+    
+            <li class="nav-item">
+              <a href="/photozone" style="font-family: Codystar" class="heading-3">Photo Zone</a>
+            </li>
+          </ul>
+
+          <ul class="ff-flash | menu-nav | flip-menu-blackbox | body_phone" style="font-size:1.5rem; line-height:1.7;">
+    
+            <li class="nav-item ">
+              <a href="/" style="font-family: Codystar" class="">Home</a>
+            </li>
+    
+            <li class="nav-item">
+              <a href="/guestsurvey" style="font-family: Codystar" class="">Guest Survey</a>
+            </li>
+    
+            <li class="nav-item">
+              <a href="/location" style="font-family: Codystar" class="">Location</a>
+            </li>
+    
+            <li class="nav-item">
+              <a href="/timeline" style="font-family: Codystar" class="">Timeline</a>
+            </li>
+    
+            <li class="nav-item">
+              <a href="/photozone" style="font-family: Codystar" class="">Photo Zone</a>
+            </li>
+          </ul>
+        </nav>
+      </div> 
+      <img src="" height="100">
+  </header>
+  
+</div>
+
+<slot />
+
+<div class="body_web" >
+<footer class="site-footer" >
+  <section class="section | clr-neutral-000 ">
+    <div class="container" data-type="wide">
+      <div class="even-columns">
+        <div class="">
+        <div class="flow">
+            <h2 class="heading-2">
+              <div class="ff-neon-blue" style="font-family: Herr von Muellerhoff">
+                About our wedding
+              </div>
+            </h2>
+          <p class="ff-text-main" style="font-size: 1rem;">
+            Wann findet unsere Hochzeit statt, wo findet sie statt.
+          <br>
+          </br>
+          </p>
+          
+        </div>
+        </div>
+        <div class="">
+        </div>
+      </div>
+    </div>
+  </section>
+  </footer>
+</div>
+
+<div class="body_phone">
+  <footer class="site-footer">
+  <section class="section | clr-neutral-000 ">
+    <div class="container" data-type="narrow2">
+      <div class="even-columns">
+        <div class="">
+        <div class="flow">
+            <h2 class="heading-2">
+              <div class="ff-neon-blue" style="font-family: Herr von Muellerhoff">
+                About our wedding
+              </div>
+            </h2>
+          <p class="ff-text-main" style="font-size: 1rem;">
+            Wann findet unsere Hochzeit statt, wo findet sie statt.
+          <br>
+          </br>
+          </p>
+        </div>
+        </div>
+        <div class="">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  </footer>
+</div>
+<script src="/main.js" is:inline></script>
+</body>
+
+</html>
+
+<script>
+  let isLoggedIn = await localStorage.getItem('isLoggedIn')
+
+  if (isLoggedIn === null) {
+    window.location.href = '/login'
+  }
+
+		// Select dom items
+		const menuBtn = 
+			document.querySelector(".menu-btn");
+
+		const menu = 
+			document.querySelector(".menu");
+
+		const menuNav = 
+			document.querySelector(".menu-nav");
+
+		const navItems = 
+			document.querySelectorAll(".nav-item");
+
+		// Set the initial state of the menu
+		let showMenu = false;
+
+		menuBtn.addEventListener("click", toggleMenu);
+
+		function toggleMenu() {
+			if (!showMenu) {
+				menuBtn.classList.add("close");
+				menu.classList.add("show");
+				menuNav.classList.add("show");
+				
+				navItems.forEach((item) =>
+					item.classList.add("show"));
+
+				// Reset the menu state
+				showMenu = true;
+			} else {
+				menuBtn.classList.remove("close");
+				menu.classList.remove("show");
+				menuNav.classList.remove("show");
+				
+				navItems.forEach((item) =>
+					item.classList.remove("show"));
+
+				// Reset the menu state
+				showMenu = false;
+			}
+		}
+</script>

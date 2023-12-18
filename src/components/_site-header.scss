@@ -1,0 +1,181 @@
+@use "../abstracts" as *;
+
+.site-header {
+  color: $site-header-color;
+  background-color: $site-header-background-color;
+  padding-top: $size-12;
+
+  &__inner {
+    display: flex;
+    gap: $size-4;
+    align-items: $site-header-alignment;
+    justify-content: $site-header-jusitifcation-small-screens;
+
+    @include mq(medium) {
+      justify-content: $site-header-jusitifcation-large-screens;
+    }
+  }
+}
+.site-header-2 {
+  color: $site-header-color;
+  background-color: $site-header-background-color;
+
+  &__inner {
+    display: flex;
+    gap: $size-4;
+    align-items: $site-header-alignment;
+    justify-content: $site-header-jusitifcation-small-screens;
+
+    @include mq(medium) {
+      justify-content: $site-header-jusitifcation-large-screens;
+    }
+  }
+}
+
+.sh-location {
+  color: $site-header-color;
+  background-image: url('/Flintsbach.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+  height: 800px;
+
+  @media (max-device-width : 600px) { 
+          background-attachment: local;
+          padding: $size-10;
+          height: 300px;
+          }
+  @media (min-width : 600px) and (max-width : 900px) { 
+          background-attachment: local;
+          padding: $size-10;
+          height: 500px;
+          }
+  @media (min-width : 900px) and (max-width : 1100px) { 
+          background-attachment: local;
+          padding: $size-10;
+          height: 700px;
+          }
+
+  &__inner {
+    display: flex;
+    gap: $size-4;
+    align-items: $site-header-alignment;
+    justify-content: $site-header-jusitifcation-small-screens;
+
+    @include mq(medium) {
+      justify-content: $site-header-jusitifcation-large-screens;
+    }
+  }
+}
+
+.sh-photozone {
+  color: $site-header-color;
+  background-image: url('/bearbeitet.JPG');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: $size-10;
+  height:800px;
+
+  @media (max-device-width : 600px) { 
+    background-attachment: local;
+    padding: $size-10;
+    height: 300px;
+    }
+  @media (min-width : 600px) and (max-width : 900px) { 
+    background-attachment: local;
+    padding: $size-10;
+    height: 500px;
+    }
+  @media (min-width : 900px) and (max-width : 1100px) { 
+    background-attachment: local;
+    padding: $size-10;
+    height: 700px;
+    }
+
+  &__inner {
+    display: flex;
+    gap: $size-4;
+    align-items: $site-header-alignment;
+    justify-content: $site-header-jusitifcation-small-screens;
+
+    @include mq(medium) {
+      justify-content: $site-header-jusitifcation-large-screens;
+    }
+  }
+}
+
+.sh-timeline {
+  color: $site-header-color;
+  background-image: url('/4U4A7551.JPG');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: $size-10;
+  height:800px;
+
+  @media (max-device-width : 600px) { 
+    background-attachment: local;
+    padding: $size-10;
+    height: 300px;
+    }
+  @media (min-width : 600px) and (max-width : 900px) { 
+    background-attachment: local;
+    padding: $size-10;
+    height: 500px;
+    }
+  @media (min-width : 900px) and (max-width : 1100px) { 
+    background-attachment: local;
+    padding: $size-10;
+    height: 700px;
+    }
+
+  &__inner {
+    display: flex;
+    gap: $size-4;
+    align-items: $site-header-alignment;
+    justify-content: $site-header-jusitifcation-small-screens;
+
+    @include mq(medium) {
+      justify-content: $site-header-jusitifcation-large-screens;
+    }
+  }
+}
+
+.sh-gs {
+  color: $site-header-color;
+  background-image: url('/4U4A7635.JPG');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: $size-10;
+  height:800px;
+
+  @media (max-device-width : 600px) { 
+    background-attachment: local;
+    padding: $size-10;
+    height: 300px;
+    }
+  @media (min-width : 600px) and (max-width : 900px) { 
+    background-attachment: local;
+    padding: $size-10;
+    height: 500px;
+    }
+  @media (min-width : 900px) and (max-width : 1100px) { 
+    background-attachment: local;
+    padding: $size-10;
+    height: 700px;
+    }
+
+  &__inner {
+    display: flex;
+    gap: $size-4;
+    align-items: $site-header-alignment;
+    justify-content: $site-header-jusitifcation-small-screens;
+
+    @include mq(medium) {
+      justify-content: $site-header-jusitifcation-large-screens;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+@use "../abstracts" as *;
+
+.box-shadow-1 {
+  box-shadow: $box-shadow-1;
+}
+
+.box-shadow-2 {
+  box-shadow: $box-shadow-2;
+}
+
+.box-shadow-3 {
+  box-shadow: $box-shadow-3;
+}
+
+.box-shadow-4 {
+  box-shadow: $box-shadow-4;
+}
+
+.box-shadow-5 {
+  box-shadow: $box-shadow-5;
+}
+
+.WendelsteinBlurred {
+  background-image: url('/Wendelstein.jpeg');
+  width: 1100px;
+  height: 700px;
+  /* you need to match the shadow color to your background or image border for the desired effect*/
+  box-shadow: 0 0 30px 30px white inset;
+}
+
+.HanbokBlurred {
+  background-image: url('/4U4A7551.JPG');
+  width: 1100px;
+  height: 700px;
+  background-size: contain;
+  box-shadow: 0 0 30px 30px white inset;
+}
+
+.HomeBlurred {
+  background-image: url('/4U4A7336.png');
+  width: 380px;
+  height: 477px;
+  background-size: contain;
+  box-shadow: 0 0 70px 70px white inset;
+}
+
+.PhotozoneBlurred {
+  background-image: url('/4U4A7565.JPG');
+  width: 860px;
+  height:800px;
+  background-size: contain;
+  box-shadow: 0 0 30px 30px white inset;
+}
+
+.PhotozoneCut {
+  background-image: url('/4U4A7635.JPG');
+  width: 1500px;
+  height:800px;
+  background-size: cover;
+}

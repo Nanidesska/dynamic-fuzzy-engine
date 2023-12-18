@@ -1,0 +1,135 @@
+---
+import LoginLayout from '../layouts/LoginLayout.astro'
+import LoginForm from '../components/LoginForm.astro'
+import { Notification } from 'accessible-astro-components'
+import { Icon } from 'astro-icon'
+---
+
+<LoginLayout title="Login">
+</br></br></br></br></br>
+  <section class="bg-neutral-000">
+    <div class="login">
+      <div class="login__inner reveal h-screen">
+        <div class="inner__brand">
+          <div class="brand__text" style="font-family: Cinzel">
+            
+              <span>Quick login</span>
+            
+            <div class="fade-in-text-15">
+              <span>Accessible to our guests only</span>
+            </div>
+          </div>
+        </div>
+        <div class="inner__form space-content" style="font-family: Cinzel">
+          <div class="space-content" >
+            <h3 class="heading-3">
+              <div class="fade-in-text-10" style="font-family: Cinzel">
+              Wedding invitation
+              </div>
+            </h3>
+          </br>
+            <LoginForm />
+          </div>
+        </div>
+        <div class="login__footer text-neutral-700 | fade-in-text-15">
+          <h5 class="heading-5" style="font-family: Cinzel">
+          <span>Nani & Sebastian</span>
+        </h5>
+        </div>
+      </div>
+      <div class="login__background h-screen" />
+    </div>
+  </section>
+</br></br></br></br>
+</LoginLayout>
+
+<style lang="scss">
+  @use '../abstracts/breakpoints' as *;
+  @use '../abstracts/sizes' as *;
+  @use '../base/space' as *;
+
+  .login {
+    display: grid;
+    background-color: var(--neutral-000);
+    @include breakpoints(medium) {
+      grid-template-columns: 550px 2fr;
+    }
+
+    .login__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: $space-48;
+      padding: $space-24;
+      z-index: 1;
+      background-color: var(--neutral-000);
+      
+      @include breakpoints(medium) {
+        padding: $space-48 $space-96;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    .inner__brand {
+      display: flex;
+      align-items: center;
+      gap: $space-16;
+    }
+
+    .brand__logo {
+      max-width: 50px;
+    }
+
+    .brand__text {
+      display: flex;
+      flex-direction: column;
+      gap: $space-2;
+
+      > :first-child {
+        font-weight: bold;
+        @include size-20;
+      }
+
+      > :last-child {
+        @include size-14;
+      }
+    }
+
+    .login__background {
+      display: none;
+      background-color: transparent;
+      //background-image: url("/Wendelstein.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include breakpoints(medium) {
+        display: block;
+      }
+    }
+
+    .reveal {
+      animation: reveal 0.3s ease-in;
+    }
+
+    .login__footer {
+      padding-bottom: $space-24;
+
+      @include breakpoints(medium) {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      transform: translateY(-1rem);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
