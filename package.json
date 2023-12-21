@@ -29,7 +29,7 @@
     "@fontsource/twinkle-star": "^5.0.17",
     "@fontsource/yanone-kaffeesatz": "^5.0.17",
     "accessible-astro-components": "^2.3.1",
-    "astro": "^4.0.6",
+    "astro": "^4.0.7",
     "astro-icon": "^0.7.3",
     "astro-php": "^0.0.1",
     "css-toggle": "^1.0.3",
@@ -40,6 +40,7 @@
     "vite": "^5.0.10"
   },
   "devDependencies": {
+    "@types/react": "^18.2.45",
     "sass": "^1.69.5",
     "tsx": "^4.6.2"
   }
