@@ -41,7 +41,7 @@
   
   height: 800px;
 
-  @media (max-device-width : 600px) { 
+  @media (max-width : 600px) { 
           background-attachment: local;
           padding: $size-10;
           height: 300px;
@@ -78,7 +78,7 @@
   padding: $size-10;
   height:800px;
 
-  @media (max-device-width : 600px) { 
+  @media (max-width : 600px) { 
     background-attachment: local;
     padding: $size-10;
     height: 300px;
@@ -115,7 +115,7 @@
   padding: $size-10;
   height:800px;
 
-  @media (max-device-width : 600px) { 
+  @media (max-width : 600px) { 
     background-attachment: local;
     padding: $size-10;
     height: 300px;
@@ -152,7 +152,7 @@
   padding: $size-10;
   height:800px;
 
-  @media (max-device-width : 600px) { 
+  @media (max-width : 600px) { 
     background-attachment: local;
     padding: $size-10;
     height: 300px;

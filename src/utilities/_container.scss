@@ -14,6 +14,9 @@
 .container[data-type="narrow2"] {
   --max-width: #{$container-max-width-narrow2};
 }
+.container[data-type="narrow3"] {
+  --max-width: #{$container-max-width-narrow3};
+}
 .container[data-type="wide"] {
   --max-width: #{$container-max-width-wide};
 }
@@ -21,4 +24,12 @@
   --max-width: 100%;
 }
 
+.margin-phone {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  @media (min-width: 800px) {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}
 

@@ -18,3 +18,21 @@
         
       }
 }
+.list_roman_phone {
+    margin: 35px; 
+    margin-left: 15px; 
+    list-style-type:circle;
+    color: $clr-neutral-000;
+    font-size: 1rem; 
+    line-height: 2.2rem; 
+    
+
+    li {
+        margin-top: 1rem; 
+    }
+    
+    li span {
+        left: 10px;
+        
+      }
+}

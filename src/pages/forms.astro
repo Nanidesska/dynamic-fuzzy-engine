@@ -3,6 +3,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
 ---
 
 <FormsLayout title="Guest survey">
+<div class="body_web">
 </br></br></br></br></br>
 
 <section class="bg-neutral-000">
@@ -35,6 +36,17 @@ import FormsLayout from '../layouts/FormsLayout.astro';
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
+
+                <p style=“line-height: 80%“></br></p>
+
+                <label for="travel" id="label-travel">
+                  <div class="" style="font-family: Cinzel; font-size: 0.9rem;">If yes, how are you traveling?</div>
+              </label>
+              <select class="" name="travel" id="travel" required>
+                <option disabled value="" style="font-size: 0.9rem;">Please choose an option</option>
+                  <option value="car" style="font-size: 0.9rem;">By car</option>
+                  <option value="train" style="font-size: 0.9rem;">By train</option>
+              </select>
 
                 <p style=“line-height: 80%“></br></p>
 
@@ -85,7 +97,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
                 <p style=“line-height: 80%“></br></p>
 
                 <label for="food" id="label-food">
-				        <div style="font-family: Cinzel">Let us know if you have any dining specification(s) including intolerance for spicy food.</div>
+				        <div class="clr-neutral-400" style="font-family: Cinzel">Let us know if you have any dining specification(s).</div>
 			          </label>
 			          <div style="font-family:none;"> <input type="text" name="food" id="food" /></div>
 
@@ -111,17 +123,146 @@ import FormsLayout from '../layouts/FormsLayout.astro';
 </div>
 </section>
 </br></br></br></br>
+</div>
+
+<div class="body_phone">
+
+
+<section class="bg-neutral-000">
+  <div class="login">
+    <div class="login__inner reveal h-screen">
+      <div class="inner__brand">
+        <div class="brand__text" style="font-family: Cinzel; margin-top: 2rem; ">
+          
+            <span>Guest survey</span><br>
+            <span> To make the best out of the day, some major information on your attendance would be helpful. Thank you for your participation.</span>
+          
+        </div>
+      </div>
+      <div class="inner__form space-content" style="font-family: Cinzel">
+        <form class="login-form space-content" method="POST" id="guestSurvey" action="/guestsurvey">
+          <div class="login-form__controls">
+                <label for="name" id="label-name">
+				            <div style="font-family: Cinzel; font-size: 0.9rem;">Full name *</div>
+			          </label>
+			          <div style="font-family:none;"> <input name="name" type="text" id="name" required /></div>
+
+                <p style=“line-height: 80%“></br></p>
+
+                <label id="label-join">
+                    <div style="font-family: Cinzel; font-size: 0.9rem;">Are you joining our wedding? *
+                    </div>
+                </label>
+                <select name="join" id="join" required>
+                  <option disabled value="" style=" font-size: 0.9rem;">Please choose an option</option>
+                    <option value="Yes" style="font-size: 0.9rem;">Yes</option>
+                    <option value="No" style="font-size: 0.9rem;">No</option>
+                </select>
+
+                <p style=“line-height: 80%“></br></p>
+
+                <label for="partner" id="label-partner">
+                    <div style="font-family: Cinzel; font-size: 0.9rem;">Are you bringing your partner? *</div>
+                </label>
+                <select name="partner" id="label-partner" required>
+                  <option disabled value="" style="font-size: 0.9rem;">Please choose an option</option>
+                    <option value="Yes" style="font-size: 0.9rem;">Yes</option>
+                    <option value="No1" style="font-size: 0.9rem;">No, I am single :)</option>
+                    <option value="No2" style="font-size: 0.9rem;">No</option>
+                </select>
+
+                <p style=“line-height: 80%“></br></p>
+
+                <label for="children" id="label-children">
+                    <div style="font-family: Cinzel; font-size: 0.9rem;"> Are you bringing your child(ren)? *</div>
+                </label>
+                <select name="children" id="children" required>
+                  <option disabled value="" style="font-size: 0.9rem;">Please choose an option</option>
+                    <option value="No" style="font-size: 0.9rem;">No</option>
+                    <option value="Yes1" style="font-size: 0.9rem;">Yes, 1</option>
+                    <option value="Yes2" style="font-size: 0.9rem;">Yes, 2</option>
+                    <option value="Yes3" style="font-size: 0.9rem;">Yes, 3</option>
+                </select>
+
+                <p style=“line-height: 80%“></p>
+  
+                <label for="childrenage" id="label-childrenage">
+                <div class="clr-neutral-400" style="font-family: Cinzel; font-size: 0.9rem;">If yes, how old?</div>
+			          </label>
+                
+			          <div style="font-family:none;"> 
+                  <input type="text" name="childrenage" id="childrenage" required/>
+                </div>
+              
+                <p style=“line-height: 80%“></br></p>
+
+                <label for="partner" id="label-partner">
+                  <div style="font-family: Cinzel; font-size: 0.9rem;">How are you traveling? *</div>
+              </label>
+              <select name="partner" id="label-partner" required>
+                <option disabled value="" style="font-size: 0.9rem;">Please choose an option</option>
+                  <option value="Yes" style="font-size: 0.9rem;">By car</option>
+                  <option value="No1" style="font-size: 0.9rem;">By train</option>
+              </select>
+
+              <p style=“line-height: 80%“></br></p>
+
+                <label for="hotel" id="label-hotel">
+                    <div style="font-family: Cinzel; font-size: 0.9rem;"> Do you want to have a hotel room near Flintsbach? *</div>
+                </label>
+                <select name="hotel" id="hotel" required >
+                  <option disabled value="" style="font-size: 0.9rem;">Please choose an option</option>
+                    <option value="Yes" style="font-size: 0.9rem;">Yes</option>
+                    <option value="No" style="font-size: 0.9rem;">No</option>
+                </select>
+
+                <p style=“line-height: 80%“></br></p>
+
+                <label for="food" id="label-food">
+				        <div class="clr-neutral-400" style="font-family: Cinzel; font-size: 0.9rem;">Let us know if you have any dining specification(s).</div>
+			          </label>
+			          <div style="font-family:none;"> <input type="text" name="food" id="food" /></div>
+
+                <p style=“line-height: 80%“></br></p>
+                
+                <button class="" type="submit" value="Submit">
+                    <div style="font-family: Cinzel" class="accentbuttonbox">
+                          Submit
+                    </div>
+                </button>
+          </div>
+        </form> 
+
+    </div>
+    <div class="login__footer text-neutral-700 ">
+        <h5 class="heading-5" style="font-family: Cinzel">
+        <span>Thank you!</span>
+        </h5>
+    </div>
+    <div class="login__background h-screen" />
+    </div>
+</div>
+</div>
+</section>
+</br></br></br></br>
+</div>
 </FormsLayout>
 
 <script>
 
     const form = document.querySelector('.login-form')
+    const joininginput = form.querySelector('select[name="join"]')
     const childreninput = form.querySelector('select[name="children"]')
+    const travelinput = form.querySelector('select[name="travel"]')
     const childrenageinput = form.querySelector('input[name="childrenage"]')
     const submitButton = form.querySelector('button')
-    
+
     submitButton.addEventListener('click', event => {
     
+      if (joininginput.value === 'No'){
+        travelinput.removeAttribute('required')
+        travelinput.setAttribute('clr-neutral-400')
+      }
       if (childreninput.value === 'No'){
         childrenageinput.removeAttribute('required')
       }
@@ -156,6 +297,10 @@ import FormsLayout from '../layouts/FormsLayout.astro';
     @include breakpoints(medium) {
       padding: $space-48 $space-96;
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 500px) {
+      padding: 2rem;
     }
   }
 

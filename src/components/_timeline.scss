@@ -19,10 +19,20 @@
     background: none;
     align-items: left;
 }
+.timeline-solid {
+    width: calc(100%/2);
+    height: 15rem;
+    border-right: 0.3rem solid white;
+    margin-top: 0.1rem;
+    margin-left: 0.15rem;
+    
+    background: none;
+    align-items: left;
+}
 
 .timeline-dash-phone1 {
     width: calc(100%/2);
-    height: 40rem;
+    height: 38rem;
     border-right: 3px dashed white;
     
     margin-left: 1.5px;
@@ -30,14 +40,18 @@
     background: none;
     align-items: left;
 
-    @media (min-width: 400px) {
-        height: 48rem;
+    @media (min-width: 500px) and (max-width: 760px) {
+        height: 50rem;
+    }
+
+    @media (min-width: 760px) {
+        height: 40rem;
     }
 }
 
 .timeline-dash-phone2 {
     width: calc(100%/2);
-    height: 40rem;
+    height: 47rem;
     border-right: 3px dashed white;
     
     margin-left: 1.5px;
@@ -45,14 +59,17 @@
     background: none;
     align-items: left;
 
-    @media (min-width: 400px) {
-        height: 48rem;
+    @media (min-width: 500px) and (max-width: 760px) {
+        height: 55rem;
+    }
+    @media (min-width: 760px) {
+        height: 45rem;
     }
 }
 
 .timeline-dash-phone3 {
     width: calc(100%/2);
-    height: 35rem;
+    height: 42rem;
     border-right: 3px dashed white;
     
     margin-left: 1.5px;
@@ -60,7 +77,46 @@
     background: none;
     align-items: left;
 
-    @media (min-width: 400px) {
-        height: 42rem;
+    @media (min-width: 500px) and (max-width: 760px) {
+        height: 46rem;
+    }
+    @media (min-width: 760px) {
+        height: 36rem;
+    }
+}
+
+.timeline-dash-phone4 {
+    width: calc(100%/2);
+    height: 17.6rem;
+    border-right: 3px dashed white;
+    
+    margin-left: 1.5px;
+    
+    background: none;
+    align-items: left;
+
+    @media (min-width: 500px) and (max-width: 760px) {
+        height: 18.5rem;
+    }
+    @media (min-width: 760px) {
+        height: 11rem;
+    }
+}
+
+.timeline-solid-phone5 {
+    width: calc(100%/2);
+    height: 13.5rem;
+    border-right: 3px solid white;
+    
+    margin-left: 1.5px;
+    
+    background: none;
+    align-items: left;
+
+    @media (min-width: 500px) and (max-width: 760px) {
+        height: 12rem;
+    }
+    @media (min-width: 760px) {
+        height: 9rem;
     }
 }
