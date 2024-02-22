@@ -62,6 +62,22 @@
   }
 }
 
+.accentbuttonboxnohover {
+  background-color: var(--gray-medium);
+  color: $button-accent-color-hover;
+  font-size: $button-font-size;
+  text-transform: $button-text-transform;
+  font-weight: $button-font-weight;
+  padding: 0.4em 2.4em;
+  border: $button-border;
+  border-radius: 0.25rem;
+
+  &:is(:hover, :focus) {
+    background-color: var(--gray-medium);
+    color: $button-accent-color-hover;
+  }
+}
+
 .neutralbuttonbox {
     display: flex;
     align-items: center;

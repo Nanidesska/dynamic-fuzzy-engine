@@ -27,7 +27,7 @@ import '@fontsource/cinzel';
 </head>
 
 <body>
-  <div class="" >
+  
   <header class={siteheader}>
     <div class="flow">
       
@@ -35,91 +35,67 @@ import '@fontsource/cinzel';
         <div class="flow">
           <img src="" height="10"/>
           <div class="menu-leiste"></div>
-          <div class="menu-btn ">
+          <div class="menu-btn" style="margin-top: 1rem; z-index: 4;">
             <div class="btn-line" style="background: rgba(255, 255, 255, 0.543)"></div>
             <div class="btn-line" style="background: rgba(255, 255, 255, 0.543)"></div>
             <div class="btn-line" style="background: rgba(255, 255, 255, 0.543)"></div>
           </div>
-        <nav class="menu | fade-in-text-2" >
+          
+        <nav class="menu | fade-in-text-2 "  >
           <img src="" height="100">
           
-          <ul class="ff-flash | menu-nav | flip-menu-blackbox | body_web" style="">
-    
-            <li class="nav-item ">
-              <a href="/" style="font-family: Codystar" class="heading-3">Home</a>
-            </li>
-    
-            <li class="nav-item">
-              <a href="/guestsurvey" style="font-family: Codystar" class="heading-3">Guest Survey</a>
-            </li>
-    
-            <li class="nav-item">
-              <a href="/timeline" style="font-family: Codystar" class="heading-3">Timeline</a>
-            </li>
-
-            <li class="nav-item">
-              <a href="/locations" style="font-family: Codystar" class="heading-3">Locations</a>
-            </li>
-    
-            <li class="nav-item">
-              <a href="/photozone" style="font-family: Codystar" class="heading-3">Photo Zone</a>
-            </li>
-          </ul>
-
-          <ul class="ff-flash | menu-nav | flip-menu-blackbox | body_phone" style="font-size:1.5rem; line-height:1.7;">
-    
+          <ul class="ff-flash | menu-nav | flip-menu-blackbox" style="font-size:1.5rem; line-height:1.7;">
+      
             <li class="nav-item ">
               <a href="/" style="font-family: Codystar" class="">Home</a>
             </li>
-    
+      
             <li class="nav-item">
               <a href="/guestsurvey" style="font-family: Codystar" class="">Guest Survey</a>
             </li>
-    
-            <li class="nav-item">
-              <a href="/locations" style="font-family: Codystar" class="">Locations</a>
-            </li>
-    
+      
             <li class="nav-item">
               <a href="/timeline" style="font-family: Codystar" class="">Timeline</a>
             </li>
-    
+      
+            <li class="nav-item">
+              <a href="/locations" style="font-family: Codystar" class="">Locations</a>
+            </li>
+            
             <li class="nav-item">
               <a href="/photozone" style="font-family: Codystar" class="">Photo Zone</a>
             </li>
           </ul>
         </nav>
       </div> 
-      <img src="" height="100">
   </header>
   
-</div>
+
 
 <slot />
 
 <div class="body_web" >
 <footer class="site-footer" style="background:rgb(30, 27, 27);">
   <section class="section | clr-neutral-000 ">
-    <div class="container" data-type="wide">
-      <div class="even-columns">
-        <div class="">
+    <div class="container" data-type="wide" style="margin-left:9rem;">
+        
         <div class="flow">
             <h2 class="heading-2">
               <div class="clr-neutral-000" style="font-family: Herr von Muellerhoff">
                 About our wedding
               </div>
             </h2>
-            <ol class="list_roman" style="margin-top:2rem; margin-left:0; list-style-type:none; line-height:1.2;">
+            <div class="even-columns" style="margin-right:25rem;">
+            <ol class="list_roman" style="margin-top:1rem; margin-left:0; list-style-type:none; line-height:1.2;">
               <li><p style="font-family: Herr von Muellerhoff; font-size:2rem;margin-bottom: 0rem;">When</p> 03:00 pm - 00:00 am, 17th of August 2024 </li>
               <li> <p style="margin-top:2rem;"></p> </li>
+            </ol>
+              <ol class="list_roman" style="margin-top:1rem; margin-left:0; list-style-type:none; line-height:1.2;">
               <li><p style="font-family: Herr von Muellerhoff; font-size:2rem;margin-bottom: 0rem;">Where</p> Catholic church St. Martin & Wendelsteinhaus</li>
             </ol>
+          </div>
           
-        </div>
-        </div>
-        <div class="">
-        </div>
-      </div>
+      
     </div>
   </section>
   </footer>
@@ -131,15 +107,15 @@ import '@fontsource/cinzel';
     <div class="container" data-type="narrow2">
         <div class="">
         <div class="flow">
-            <h2 class="heading-2">
+            <h2 class="heading-3">
               <div class="clr-neutral-000 | margin-phone" style="font-family: Herr von Muellerhoff;">
                 About our wedding
               </div>
             </h2>
-            <ol class="list_roman | margin-phone" style="margin-top:2rem; list-style-type:none; line-height:1.2;">
-              <li><p style="font-family: Herr von Muellerhoff; font-size:2rem;margin-bottom: 0rem;">When</p> 03:00 pm - 00:00 am,</br> 17th of August 2024 </li>
+            <ol class="list_roman | margin-phone" style="font-size:0.8rem; margin-top:1.5rem; list-style-type:none; line-height:1.2;">
+              <li><p style="font-family: Herr von Muellerhoff; font-size:2rem;margin-bottom: 0rem;">When</p> 03:00 pm - 00:00 am, 17th of August 2024 </li>
               <li> <p style="margin-top:2rem;"></p> </li>
-              <li><p style="font-family: Herr von Muellerhoff; font-size:2rem;margin-bottom: 0rem;">Where</p>  Catholic church St. Martin & Wendelsteinhaus</li>
+              <li><p style="font-family: Herr von Muellerhoff; font-size:1.5rem;margin-bottom: 0rem;">Where</p>  Catholic church St. Martin & Wendelsteinhaus</li>
             </ol>
         </div>
       </div>
@@ -160,7 +136,7 @@ import '@fontsource/cinzel';
   }
 
 		// Select dom items
-		const menuBtn = 
+    const menuBtn = 
 			document.querySelector(".menu-btn");
 
 		const menu = 
@@ -171,6 +147,9 @@ import '@fontsource/cinzel';
 
 		const navItems = 
 			document.querySelectorAll(".nav-item");
+
+		const menuLeiste = 
+			document.querySelectorAll(".menu-leiste");
 
 		// Set the initial state of the menu
 		let showMenu = false;
@@ -183,8 +162,10 @@ import '@fontsource/cinzel';
 				menu.classList.add("show");
 				menuNav.classList.add("show");
 				
+				
 				navItems.forEach((item) =>
 					item.classList.add("show"));
+          
 
 				// Reset the menu state
 				showMenu = true;

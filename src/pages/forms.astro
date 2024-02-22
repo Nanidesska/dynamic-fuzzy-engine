@@ -13,12 +13,12 @@ import FormsLayout from '../layouts/FormsLayout.astro';
         <div class="brand__text" style="font-family: Cinzel">
           
             <span>Guest survey</span><br>
-            <span> To make the best out of the day, some major information on your attendance would be helpful. Thank you for your participation.</span>
+            <span> To make the best out of the day, some information on your attendance would be very helpful. Thank you for your participation!</span>
           
         </div>
       </div>
       <div class="inner__form space-content" style="font-family: Cinzel">
-        <form class="login-form space-content" method="POST" id="guestSurvey" action="/guestsurvey">
+        <form class="login-form space-content" method="FORM" id="guestSurvey" action="/results.php">
           <div class="login-form__controls">
                 <label for="name" id="label-name">
 				            <div style="font-family: Cinzel">Full name *</div>
@@ -32,9 +32,9 @@ import FormsLayout from '../layouts/FormsLayout.astro';
                     </div>
                 </label>
                 <select name="join" id="join" required>
-                  <option disabled value="">--Please choose an option--</option>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
+                  <option hidden disabled selected value>--Please choose an option--</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
                 </select>
 
                 <p style=“line-height: 80%“></br></p>
@@ -42,8 +42,8 @@ import FormsLayout from '../layouts/FormsLayout.astro';
                 <label for="travel" id="label-travel">
                   <div class="" style="font-family: Cinzel; font-size: 0.9rem;">If yes, how are you traveling?</div>
               </label>
-              <select class="" name="travel" id="travel" required>
-                <option disabled value="" style="font-size: 0.9rem;">Please choose an option</option>
+              <select class="traveloption" name="travel" id="travel" required >
+                <option hidden disabled selected value style="font-size: 0.9rem;">--Please choose an option--</option>
                   <option value="car" style="font-size: 0.9rem;">By car</option>
                   <option value="train" style="font-size: 0.9rem;">By train</option>
               </select>
@@ -53,8 +53,8 @@ import FormsLayout from '../layouts/FormsLayout.astro';
                 <label for="partner" id="label-partner">
                     <div style="font-family: Cinzel">Are you bringing your partner? *</div>
                 </label>
-                <select name="partner" id="label-partner" required>
-                  <option disabled value="">--Please choose an option--</option>
+                <select name="partner" id="partner" required>
+                  <option hidden disabled selected value >--Please choose an option--</option>
                     <option value="Yes">Yes</option>
                     <option value="No1">No, I am single :)</option>
                     <option value="No2">No</option>
@@ -66,21 +66,21 @@ import FormsLayout from '../layouts/FormsLayout.astro';
                     <div style="font-family: Cinzel"> Are you bringing your child(ren)? *</div>
                 </label>
                 <select name="children" id="children" required>
-                  <option disabled value="">--Please choose an option--</option>
+                  <option hidden disabled selected value >--Please choose an option--</option>
                     <option value="No">No</option>
                     <option value="Yes1">Yes, 1</option>
                     <option value="Yes2">Yes, 2</option>
                     <option value="Yes3">Yes, 3</option>
                 </select>
 
-                <p style=“line-height: 80%“></p>
+                <p style=“line-height: 80%“></br></p>
   
                 <label for="childrenage" id="label-childrenage">
-                <div class="clr-neutral-400" style="font-family: Cinzel">If yes, how old?</div>
+                <div class="" style="font-family: Cinzel">If yes, how old?</div>
 			          </label>
                 
-			          <div style="font-family:none;"> 
-                  <input type="text" name="childrenage" id="childrenage" required/>
+			          <div class="" style="font-family:none;"> 
+                  <input class="" type="text" name="childrenage" id="childrenage" required/>
                 </div>
               
                 <p style=“line-height: 80%“></br></p>
@@ -89,7 +89,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
                     <div style="font-family: Cinzel"> Do you want to have a hotel room near Flintsbach? *</div>
                 </label>
                 <select name="hotel" id="hotel" required >
-                  <option disabled value="">--Please choose an option--</option>
+                  <option hidden disabled selected value >--Please choose an option--</option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
@@ -103,7 +103,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
 
                 <p style=“line-height: 80%“></br></p>
                 
-                <button class="" type="submit" value="Submit">
+                <button id="submitbutton" class="" type="submit" value="Submit" onclick="test()">
                     <div style="font-family: Cinzel" class="accentbuttonbox">
                           Submit
                     </div>
@@ -135,7 +135,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
         <div class="brand__text" style="font-family: Cinzel; margin-top: 2rem; ">
           
             <span>Guest survey</span><br>
-            <span> To make the best out of the day, some major information on your attendance would be helpful. Thank you for your participation.</span>
+            <span> To make the best out of the day, some information on your attendance would be very helpful. Thank you for your participation!</span>
           
         </div>
       </div>
@@ -149,23 +149,23 @@ import FormsLayout from '../layouts/FormsLayout.astro';
 
                 <p style=“line-height: 80%“></br></p>
 
-                <label id="label-join">
+                <label id="label-join-phone">
                     <div style="font-family: Cinzel; font-size: 0.9rem;">Are you joining our wedding? *
                     </div>
                 </label>
-                <select name="join" id="join" required>
-                  <option disabled value="" style=" font-size: 0.9rem;">Please choose an option</option>
+                <select name="join-phone" id="join-phone" required>
+                  <option hidden disabled selected value style=" font-size: 0.9rem;">Please choose an option</option>
                     <option value="Yes" style="font-size: 0.9rem;">Yes</option>
                     <option value="No" style="font-size: 0.9rem;">No</option>
                 </select>
 
                 <p style=“line-height: 80%“></br></p>
 
-                <label for="partner" id="label-partner">
+                <label for="partner-phone" id="label-partner-phone">
                     <div style="font-family: Cinzel; font-size: 0.9rem;">Are you bringing your partner? *</div>
                 </label>
-                <select name="partner" id="label-partner" required>
-                  <option disabled value="" style="font-size: 0.9rem;">Please choose an option</option>
+                <select name="partner-phone" id="partner-phone" required>
+                  <option hidden disabled selected value style="font-size: 0.9rem;">Please choose an option</option>
                     <option value="Yes" style="font-size: 0.9rem;">Yes</option>
                     <option value="No1" style="font-size: 0.9rem;">No, I am single :)</option>
                     <option value="No2" style="font-size: 0.9rem;">No</option>
@@ -173,59 +173,59 @@ import FormsLayout from '../layouts/FormsLayout.astro';
 
                 <p style=“line-height: 80%“></br></p>
 
-                <label for="children" id="label-children">
+                <label for="children-phone" id="label-children-phone">
                     <div style="font-family: Cinzel; font-size: 0.9rem;"> Are you bringing your child(ren)? *</div>
                 </label>
-                <select name="children" id="children" required>
-                  <option disabled value="" style="font-size: 0.9rem;">Please choose an option</option>
+                <select name="children-phone" id="children-phone" required>
+                  <option hidden disabled selected value style="font-size: 0.9rem;">Please choose an option</option>
                     <option value="No" style="font-size: 0.9rem;">No</option>
                     <option value="Yes1" style="font-size: 0.9rem;">Yes, 1</option>
                     <option value="Yes2" style="font-size: 0.9rem;">Yes, 2</option>
                     <option value="Yes3" style="font-size: 0.9rem;">Yes, 3</option>
                 </select>
 
-                <p style=“line-height: 80%“></p>
+                <p style=“line-height: 80%“></br></p>
   
-                <label for="childrenage" id="label-childrenage">
-                <div class="clr-neutral-400" style="font-family: Cinzel; font-size: 0.9rem;">If yes, how old?</div>
+                <label for="childrenage-phone" id="label-childrenage-phone">
+                <div class="" style="font-family: Cinzel; font-size: 0.9rem;">If yes, how old?</div>
 			          </label>
                 
-			          <div style="font-family:none;"> 
-                  <input type="text" name="childrenage" id="childrenage" required/>
+			          <div class="" style="font-family:none;"> 
+                  <input type="text" name="childrenage-phone" id="childrenage-phone" required/>
                 </div>
               
                 <p style=“line-height: 80%“></br></p>
 
-                <label for="partner" id="label-partner">
-                  <div style="font-family: Cinzel; font-size: 0.9rem;">How are you traveling? *</div>
+                <label for="travel-phone" id="label-travel-phone">
+                  <div style="font-family: Cinzel; font-size: 0.9rem;">If yes, how are you traveling? *</div>
               </label>
-              <select name="partner" id="label-partner" required>
-                <option disabled value="" style="font-size: 0.9rem;">Please choose an option</option>
-                  <option value="Yes" style="font-size: 0.9rem;">By car</option>
-                  <option value="No1" style="font-size: 0.9rem;">By train</option>
+              <select name="travel-phone" id="label-travel-phone" required>
+                <option hidden disabled selected value style="font-size: 0.9rem;">Please choose an option</option>
+                  <option value="car" style="font-size: 0.9rem;">By car</option>
+                  <option value="train" style="font-size: 0.9rem;">By train</option>
               </select>
 
               <p style=“line-height: 80%“></br></p>
 
-                <label for="hotel" id="label-hotel">
+                <label for="hotel-phone" id="label-hotel-phone">
                     <div style="font-family: Cinzel; font-size: 0.9rem;"> Do you want to have a hotel room near Flintsbach? *</div>
                 </label>
-                <select name="hotel" id="hotel" required >
-                  <option disabled value="" style="font-size: 0.9rem;">Please choose an option</option>
+                <select name="hotel-phone" id="hotel-phone" required >
+                  <option hidden disabled selected value style="font-size: 0.9rem;">Please choose an option</option>
                     <option value="Yes" style="font-size: 0.9rem;">Yes</option>
                     <option value="No" style="font-size: 0.9rem;">No</option>
                 </select>
 
                 <p style=“line-height: 80%“></br></p>
 
-                <label for="food" id="label-food">
+                <label for="food-phone" id="label-food-phone">
 				        <div class="clr-neutral-400" style="font-family: Cinzel; font-size: 0.9rem;">Let us know if you have any dining specification(s).</div>
 			          </label>
-			          <div style="font-family:none;"> <input type="text" name="food" id="food" /></div>
+			          <div style="font-family:none;"> <input type="text" name="food-phone" id="food-phone" /></div>
 
                 <p style=“line-height: 80%“></br></p>
                 
-                <button class="" type="submit" value="Submit">
+                <button id="submitbutton-phone" class="" type="submit" value="Submit" onclick="test()">
                     <div style="font-family: Cinzel" class="accentbuttonbox">
                           Submit
                     </div>
@@ -252,24 +252,179 @@ import FormsLayout from '../layouts/FormsLayout.astro';
 
     const form = document.querySelector('.login-form')
     const joininginput = form.querySelector('select[name="join"]')
+    const partnerinput = form.querySelector('select[name="partner"]')
+    const hotelinput = form.querySelector('select[name="hotel"]')
+    const foodinput = form.querySelector('select[name="food"]')
     const childreninput = form.querySelector('select[name="children"]')
     const travelinput = form.querySelector('select[name="travel"]')
     const childrenageinput = form.querySelector('input[name="childrenage"]')
-    const submitButton = form.querySelector('button')
+    const submitButton = document.getElementById('submitbutton')
+
+    const joininginputphone = form.querySelector('select[name="join-phone"]')
+    const partnerinputphone = form.querySelector('select[name="partner-phone"]')
+    const hotelinputphone = form.querySelector('select[name="hotel-phone"]')
+    const foodinputphone = form.querySelector('select[name="food-phone"]')
+    const childreninputphone = form.querySelector('select[name="children-phone"]')
+    const travelinputphone = form.querySelector('select[name="travel-phone"]')
+    const childrenageinputphone = form.querySelector('input[name="childrenage-phone"]')
+    const submitButtonphone = document.getElementById('submitbutton-phone')
+    
+    submitButton.addEventListener('submit', function() {
+      if (form.checkValidity()) {
+        document.getElementById("submitbutton").setAttribute("class", "accentbuttonboxnohover");
+      }
+    })
 
     submitButton.addEventListener('click', event => {
     
       if (joininginput.value === 'No'){
         travelinput.removeAttribute('required')
-        travelinput.setAttribute('clr-neutral-400')
+        partnerinput.removeAttribute('required')
+        childreninput.removeAttribute('required')
+        childrenageinput.removeAttribute('required')
+        hotelinput.removeAttribute('required')
       }
       if (childreninput.value === 'No'){
         childrenageinput.removeAttribute('required')
       }
-
     })
 
+    joininginput.addEventListener ("change", function () {
+      if (joininginput.value === "No"){        
+        document.getElementById("travel").setAttribute("disabled", "disabled");  
+        document.getElementById("label-travel").style.color = "var(--neutral-300)";
+        document.getElementById("partner").setAttribute("disabled", "disabled");  
+        document.getElementById("label-partner").style.color = "var(--neutral-300)";
+        document.getElementById("children").setAttribute("disabled", "disabled");  
+        document.getElementById("label-children").style.color = "var(--neutral-300)";
+        document.getElementById("childrenage").setAttribute("disabled", "disabled");  
+        document.getElementById("label-childrenage").style.color = "var(--neutral-300)";
+        document.getElementById("hotel").setAttribute("disabled", "disabled");  
+        document.getElementById("label-hotel").style.color = "var(--neutral-300)";
+        document.getElementById("food").setAttribute("disabled", "disabled");  
+        document.getElementById("label-food").style.color = "var(--neutral-300)";
+        document.getElementById("food").style.color = "var(--neutral-100)";
+      }
+      else {
+        document.getElementById("travel").removeAttribute("disabled");
+        document.getElementById("label-travel").style.color = "var(--neutral-700)";
+        document.getElementById("partner").removeAttribute("disabled");  
+        document.getElementById("label-partner").style.color = "var(--neutral-700)";
+        document.getElementById("children").removeAttribute("disabled");  
+        document.getElementById("label-children").style.color = "var(--neutral-700)";
+        document.getElementById("childrenage").removeAttribute("disabled");  
+        document.getElementById("label-childrenage").style.color = "var(--neutral-700)";
+        document.getElementById("hotel").removeAttribute("disabled");  
+        document.getElementById("label-hotel").style.color = "var(--neutral-700)";
+        document.getElementById("food").removeAttribute("disabled");  
+        document.getElementById("label-food").style.color = "var(--neutral-700)";
+        document.getElementById("food").style.color = "var(--neutral-700)";
+      }
+    });
 
+    childreninput.addEventListener ("change", function () {
+      if (childreninput.value === "No"){
+          document.getElementById("childrenage").setAttribute("disabled", "disabled");
+          document.getElementById("childrenage").style.color = "var(--neutral-100)";
+          document.getElementById("label-childrenage").style.color = "var(--neutral-300)";
+          
+      }
+      else {
+        document.getElementById("childrenage").removeAttribute("disabled");
+        document.getElementById("label-childrenage").style.color = "var(--neutral-700)";
+        document.getElementById("childrenage").style.color = "var(--neutral-700)";
+        
+      }
+    });
+    
+
+
+    submitButtonphone.addEventListener('submit', function() {
+      if (form.checkValidity()) {
+        document.getElementById("submitbutton-phone").setAttribute("class", "accentbuttonboxnohover");
+      }
+    })
+
+    submitButtonphone.addEventListener('click', event => {
+    
+      if (joininginputphone.value === 'No'){
+        travelinputphone.removeAttribute('required')
+        partnerinputphone.removeAttribute('required')
+        childreninputphone.removeAttribute('required')
+        childrenageinputphone.removeAttribute('required')
+        hotelinputphone.removeAttribute('required')
+      }
+      if (childreninputphone.value === 'No'){
+        childrenageinputphone.removeAttribute('required')
+      }
+    })
+
+    joininginputphone.addEventListener ("change", function () {
+      if (joininginputphone.value === "No"){        
+        document.getElementById("travel-phone").setAttribute("disabled", "disabled");  
+        document.getElementById("label-travel-phone").style.color = "var(--neutral-300)";
+        document.getElementById("partner-phone").setAttribute("disabled", "disabled");  
+        document.getElementById("label-partner-phone").style.color = "var(--neutral-300)";
+        document.getElementById("children-phone").setAttribute("disabled", "disabled");  
+        document.getElementById("label-children-phone").style.color = "var(--neutral-300)";
+        document.getElementById("childrenage-phone").setAttribute("disabled", "disabled");  
+        document.getElementById("label-childrenage-phone").style.color = "var(--neutral-300)";
+        document.getElementById("hotel-phone").setAttribute("disabled", "disabled");  
+        document.getElementById("label-hotel-phone").style.color = "var(--neutral-300)";
+        document.getElementById("food-phone").setAttribute("disabled", "disabled");  
+        document.getElementById("label-food-phone").style.color = "var(--neutral-300)";
+        document.getElementById("food-phone").style.color = "var(--neutral-100)";
+      }
+      else {
+        document.getElementById("travel-phone").removeAttribute("disabled");
+        document.getElementById("label-travel-phone").style.color = "var(--neutral-700)";
+        document.getElementById("partner-phone").removeAttribute("disabled");  
+        document.getElementById("label-partner-phone").style.color = "var(--neutral-700)";
+        document.getElementById("children-phone").removeAttribute("disabled");  
+        document.getElementById("label-children-phone").style.color = "var(--neutral-700)";
+        document.getElementById("childrenage-phone").removeAttribute("disabled");  
+        document.getElementById("label-childrenage-phone").style.color = "var(--neutral-700)";
+        document.getElementById("hotel-phone").removeAttribute("disabled");  
+        document.getElementById("label-hotel-phone").style.color = "var(--neutral-700)";
+        document.getElementById("food-phone").removeAttribute("disabled");  
+        document.getElementById("label-food-phone").style.color = "var(--neutral-700)";
+        document.getElementById("food-phone").style.color = "var(--neutral-700)";
+      }
+    });
+
+    childreninputphone.addEventListener ("change", function () {
+      if (childreninputphone.value === "No"){
+          document.getElementById("childrenage-phone").setAttribute("disabled", "disabled");
+          document.getElementById("childrenage-phone").style.color = "var(--neutral-100)";
+          document.getElementById("label-childrenage-phone").style.color = "var(--neutral-300)";
+          
+      }
+      else {
+        document.getElementById("childrenage-phone").removeAttribute("disabled");
+        document.getElementById("label-childrenage-phone").style.color = "var(--neutral-700)";
+        document.getElementById("childrenage-phone").style.color = "var(--neutral-700)";
+        
+      }
+    });
+
+  //   form.addEventListener('submit', async (event) => {
+  //   event.preventDefault();
+
+  //     const formData = new FormData(form);
+  //     const payload = { formData: Object.fromEntries(formData) };
+
+  //     const response = await fetch('/api/saveFormData', {
+  //       method: 'POST',
+  //       body: JSON.stringify(payload)
+  //     });
+
+  //     if (response.ok) {
+  //       alert('Form data saved successfully');
+  //       // Perform any additional actions, such as navigating to a different page
+  //     } else {
+  //       alert('Error saving form data');
+  //     }
+  // });
 </script>
 
 <style lang="scss" is:global>
@@ -278,7 +433,6 @@ import FormsLayout from '../layouts/FormsLayout.astro';
 @use '../base/space' as *;
 @use '../base/border' as *;
 @use '../base/space' as *;
-  
 
 .login {
   
@@ -379,20 +533,21 @@ import FormsLayout from '../layouts/FormsLayout.astro';
   
       input {
         width: 100%;
-        @include radius-small;
+        
       }
   
       input {
         padding: 0.4em 2.4em;
         border: 0;
-        border-radius: 0.25rem;
+        border-radius: 0rem;
         background-color: var(--neutral-100);
+        color: var(--neutral-800);
         
           &:is(:focus, :active) {
           background-color: var(--neutral-200, #f6f8f9);
           color: var(--accent-400);
-          border-color: 0;
-          border: 0;
+          border-color: none;
+          border: none;
     }
       }
   
@@ -403,7 +558,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
         
         color: var(--neutral-900, #202427);
         background-color: var(--neutral-200, #f6f8f9);
-        border: 0;
+        border: none;
         border-radius: 0.25rem;
   
         &:is(:hover, :focus, :active) {

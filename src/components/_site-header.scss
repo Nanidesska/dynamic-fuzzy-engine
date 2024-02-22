@@ -15,10 +15,106 @@
       justify-content: $site-header-jusitifcation-large-screens;
     }
   }
+
+  @media (max-width : 600px) { 
+    padding-top: 0rem;
+    
+    }
+@media (min-width : 600px) and (max-width : 900px) { 
+    
+    }
+@media (min-width : 900px) and (max-width : 1100px) { 
+    
+    }
 }
 .site-header-2 {
   color: $site-header-color;
   background-color: $site-header-background-color;
+
+  &__inner {
+    display: flex;
+    gap: $size-4;
+    align-items: $site-header-alignment;
+    justify-content: $site-header-jusitifcation-small-screens;
+
+    @include mq(medium) {
+      justify-content: $site-header-jusitifcation-large-screens;
+    }
+  }
+}
+
+@keyframes zoomIn {
+  0% { background-size:800px;
+       background-position:45% 80%; }
+  100% { background-size:1200px; 
+         background-position:45% 40%; }
+}
+@keyframes zoomInweb {
+  0% { background-size:1800px;
+       background-position:30% 70%; }
+  100% { background-size:1600px; 
+         background-position:55%; }
+}
+
+.sh-home {
+  color: $site-header-color;
+  background-image: url('/band-bw.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: transform .3s ease-out;
+  height: 600px;
+
+  @media (max-width : 600px) { 
+          background-attachment: local;
+          padding: $size-10;
+          height: 350px;
+          background-size:1200px;
+          background-position:45% 40%;
+          }
+  @media (min-width : 600px) and (max-width : 900px) { 
+          background-attachment: local;
+          padding: $size-10;
+          height: 500px;
+          background-position:55%;
+          }
+  @media (min-width : 900px) and (max-width : 1100px) { 
+          background-attachment: local;
+          padding: $size-10;
+          height: 700px;
+          background-position:55%;
+          }
+}
+.sh-home-transition {
+  color: $site-header-color;
+  background-image: url('/band-bw.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+  transition: transform .3s ease-out;
+  height: 600px;
+
+  @media (max-width : 600px) { 
+          background-attachment:local;
+          padding: $size-10;
+          height: 350px;
+          background-size:1200px;
+          background-position:45% 40%;
+          animation: zoomIn 5s;
+          }
+  @media (min-width : 600px) and (max-width : 1000px) { 
+          background-attachment: local;
+          padding: $size-10;
+          height: 500px;
+          background-position:55%;
+          }
+  @media (min-width : 1000px) { 
+          background-attachment: fixed;
+          padding: $size-10;
+          height: 700px;
+          background-size:1600px;
+          background-position:55%;
+          animation: zoomInweb 4s;
+          }
 
   &__inner {
     display: flex;

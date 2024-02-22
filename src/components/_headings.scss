@@ -17,4 +17,19 @@
     $heading-3-font-size,
     $heading-3-color
   );
+  @media (max-device-width: 300px) {
+    font-size: var(--fs-500);
+  }
+}
+.headingstar {
+  font-size:1.7rem;
+  @media (max-device-width: 300px) {
+    font-size: var(--fs-500);
+  }
+}
+.headingbavaria {
+  font-size: 0.8rem;
+  @media (max-device-width: 300px) {
+    font-size: 0.5rem;
+  }
 }

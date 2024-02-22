@@ -16,6 +16,10 @@
     @media (min-width:400px) and (max-width:800px) {
       width: 500px;
     }
+    @media (max-device-width: 300px) {
+      width: 200px;
+      margin-bottom: 1rem;
+    }
   }
 
 .timeline2 {
@@ -31,6 +35,10 @@
     }
     @media (min-width:400px) and (max-width:800px) {
       width: 500px;
+    }
+    @media (max-device-width: 300px) {
+      width: 200px;
+      margin-bottom: 1rem;
     }
   }
 
@@ -48,6 +56,39 @@
   @media (min-width:400px) and (max-width:800px) {
     width: 500px;
   }
+  @media (max-device-width: 300px) {
+    width: 200px;
+    margin-bottom: 1rem;
+  }
+  }
+
+  @keyframes lightZoom {
+    0% { opacity: 1; 
+      transform: scale(100%);
+      }
+    10% { opacity: 0.9; 
+      transform: scale(99%);
+      }
+    40% { opacity: 0.9; 
+      transform: scale(105%);}
+    100% { opacity: 1; 
+      transform: scale(100%);}
+  }
+
+.homephoto {
+  
+  content: url('/4U4A7336.png');
+  object-fit:contain;
+  height: 350px;
+  }
+.homephoto-transition {
+  
+  content: url('/4U4A7336.png');
+  object-fit:contain;
+  transition: transform .3s ease-out;
+  height: 350px;
+  
+  animation:lightZoom 2s;
   }
 
 .lasvegashome {
@@ -62,15 +103,24 @@
     margin-left: 1rem;
     margin-bottom: 2rem;
 
-    @media (max-device-width: 1100px) {
+    @media (min-device-width: 300px) and (max-device-width: 1100px) {
       width: 360px;
       background-position: 50% 65%;
       background-size:contain;
       
       padding-bottom: 3.6rem;
       margin-bottom: 0.5rem;
-      margin-left: 0rem;
+      margin-left: 0rem; 
+    }
+    @media (max-device-width: 300px) {
+      width: 260px;
+      background-position: 50% 65%;
+      background-size:contain;
       
-      
+      padding-bottom: 3rem;
+      margin-bottom: 0.5rem;
+      margin-left: 0rem; 
     }
   }
+
+

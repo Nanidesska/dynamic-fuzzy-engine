@@ -1,0 +1,328 @@
+---
+import FormsLayout from '../layouts/FormsLayout.astro';
+---
+
+<FormsLayout title="Guest survey">
+<div class="body_web">
+</br></br></br></br></br>
+
+<section class="bg-neutral-000">
+  <div class="login">
+    <div class="login__inner reveal h-screen">
+      <div class="inner__brand">
+        <div class="brand__text" style="font-family: Cinzel">
+          
+            <span>Guest survey output</span><br>
+            <span> Here is the guest survey output.</span>
+            <body id="test" onload="test()">Load</body>
+            <textarea id="myTextarea" rows="10" cols="80">asdf</textarea>
+   <p></p>
+   <button onclick="mySave()">Save</button>
+   <button onclick="myLoad()">Load</button>
+            <script type="text/javascript">
+            function mySave() {
+       var myContent = document.getElementById("myTextarea").value;
+       localStorage.setItem("myContent", myContent);
+     }
+
+     function myLoad() {
+       var myContent = localStorage.getItem("myContent");
+       document.getElementById("myTextarea").value = myContent;
+     }
+                // document.write(join);
+              </script>
+        </div>
+      </div>
+      <div class="inner__form space-content" style="font-family: Cinzel">
+        
+
+    </div>
+    <div class="login__footer text-neutral-700 ">
+        <h5 class="heading-5" style="font-family: Cinzel">
+        <span>Finally!</span>
+        </h5>
+    </div>
+    <div class="login__background h-screen" />
+    </div>
+</div>
+</div>
+</section>
+</br></br></br></br>
+</div>
+
+<div class="body_phone">
+
+
+<section class="bg-neutral-000">
+  <div class="login">
+    <div class="login__inner reveal h-screen">
+      <div class="inner__brand">
+        <div class="brand__text" style="font-family: Cinzel; margin-top: 2rem; ">
+          
+            <span>Guest survey</span><br>
+            <span> To make the best out of the day, some information on your attendance would be very helpful. Thank you for your participation!</span>
+          
+        </div>
+      </div>
+      <div class="inner__form space-content" style="font-family: Cinzel">
+        <form class="login-form space-content" method="POST" id="guestSurvey" action="/guestsurvey">
+          <div class="login-form__controls">
+                <label for="name" id="label-name">
+				            <div style="font-family: Cinzel; font-size: 0.9rem;">Full name *</div>
+			          </label>
+			          <div style="font-family:none;"> <input name="name" type="text" id="name" required /></div>
+
+                <p style=“line-height: 80%“></br></p>
+
+                <label id="label-join">
+                    <div style="font-family: Cinzel; font-size: 0.9rem;">Are you joining our wedding? *
+                    </div>
+                </label>
+                <select name="join" id="join" required>
+                  <option hidden disabled selected value style=" font-size: 0.9rem;">Please choose an option</option>
+                    <option value="Yes" style="font-size: 0.9rem;">Yes</option>
+                    <option value="No" style="font-size: 0.9rem;">No</option>
+                </select>
+
+                <p style=“line-height: 80%“></br></p>
+
+                <label for="partner" id="label-partner">
+                    <div style="font-family: Cinzel; font-size: 0.9rem;">Are you bringing your partner? *</div>
+                </label>
+                <select name="partner" id="partner" required>
+                  <option hidden disabled selected value style="font-size: 0.9rem;">Please choose an option</option>
+                    <option value="Yes" style="font-size: 0.9rem;">Yes</option>
+                    <option value="No1" style="font-size: 0.9rem;">No, I am single :)</option>
+                    <option value="No2" style="font-size: 0.9rem;">No</option>
+                </select>
+
+                <p style=“line-height: 80%“></br></p>
+
+                <label for="children" id="label-children">
+                    <div style="font-family: Cinzel; font-size: 0.9rem;"> Are you bringing your child(ren)? *</div>
+                </label>
+                <select name="children" id="children" required>
+                  <option hidden disabled selected value style="font-size: 0.9rem;">Please choose an option</option>
+                    <option value="No" style="font-size: 0.9rem;">No</option>
+                    <option value="Yes1" style="font-size: 0.9rem;">Yes, 1</option>
+                    <option value="Yes2" style="font-size: 0.9rem;">Yes, 2</option>
+                    <option value="Yes3" style="font-size: 0.9rem;">Yes, 3</option>
+                </select>
+
+                <p style=“line-height: 80%“></br></p>
+  
+                <label for="childrenage" id="label-childrenage">
+                <div class="" style="font-family: Cinzel; font-size: 0.9rem;">If yes, how old?</div>
+			          </label>
+                
+			          <div class="" style="font-family:none;"> 
+                  <input type="text" name="childrenage" id="childrenage" required/>
+                </div>
+              
+                <p style=“line-height: 80%“></br></p>
+
+                <label for="travel" id="label-travel">
+                  <div style="font-family: Cinzel; font-size: 0.9rem;">If yes, how are you traveling? *</div>
+              </label>
+              <select name="travel" id="label-travel" required>
+                <option hidden disabled selected value style="font-size: 0.9rem;">Please choose an option</option>
+                  <option value="car" style="font-size: 0.9rem;">By car</option>
+                  <option value="train" style="font-size: 0.9rem;">By train</option>
+              </select>
+
+              <p style=“line-height: 80%“></br></p>
+
+                <label for="hotel" id="label-hotel">
+                    <div style="font-family: Cinzel; font-size: 0.9rem;"> Do you want to have a hotel room near Flintsbach? *</div>
+                </label>
+                <select name="hotel" id="hotel" required >
+                  <option hidden disabled selected value style="font-size: 0.9rem;">Please choose an option</option>
+                    <option value="Yes" style="font-size: 0.9rem;">Yes</option>
+                    <option value="No" style="font-size: 0.9rem;">No</option>
+                </select>
+
+                <p style=“line-height: 80%“></br></p>
+
+                <label for="food" id="label-food">
+				        <div class="clr-neutral-400" style="font-family: Cinzel; font-size: 0.9rem;">Let us know if you have any dining specification(s).</div>
+			          </label>
+			          <div style="font-family:none;"> <input type="text" name="food" id="food" /></div>
+
+                <p style=“line-height: 80%“></br></p>
+                
+                <button class="" type="submit" value="Submit" onclick="test()">
+                    <div id="submitbutton" style="font-family: Cinzel" class="accentbuttonbox">
+                          Submit
+                    </div>
+                </button>
+          </div>
+        </form> 
+
+    </div>
+    <div class="login__footer text-neutral-700 ">
+        <h5 class="heading-5" style="font-family: Cinzel">
+        <span>Thank you!</span>
+        </h5>
+    </div>
+    <div class="login__background h-screen" />
+    </div>
+</div>
+</div>
+</section>
+</br></br></br></br>
+</div>
+</FormsLayout>
+
+
+<style lang="scss" is:global>
+@use '../abstracts/breakpoints' as *;
+@use '../abstracts/sizes' as *;
+@use '../base/space' as *;
+@use '../base/border' as *;
+@use '../base/space' as *;
+
+.login {
+  
+  background-color: var(--neutral-000);
+  grid-template-columns: 700px 2fr;
+
+  .login__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: $space-48;
+    padding: $space-48;
+    z-index: 1;
+    background-color: var(--neutral-000);
+    
+    @include breakpoints(medium) {
+      padding: $space-48 $space-96;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 500px) {
+      padding: 2rem;
+    }
+  }
+
+  .inner__brand {
+    display: flex;
+    align-items: center;
+    gap: $space-16;
+  }
+
+  .brand__logo {
+    max-width: 50px;
+  }
+
+  .brand__text {
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+
+    > :first-child {
+      font-weight: bold;
+      @include size-20;
+    }
+
+    > :last-child {
+      @include size-14;
+    }
+  }
+
+  .login__background {
+    display: none;
+    background-color: transparent;
+    //background-image: url("/Wendelstein.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include breakpoints(medium) {
+      display: block;
+    }
+  }
+
+  .reveal {
+    animation: reveal 0.3s ease-in;
+  }
+
+  .login__footer {
+    padding-bottom: $space-24;
+
+    @include breakpoints(medium) {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  
+  
+  
+    .login-form {
+      label {
+        display: block;
+        margin-bottom: $space-8;
+        
+      }
+  
+      input {
+        width: 100%;
+        
+      }
+  
+      input {
+        padding: 0.4em 2.4em;
+        border: 0;
+        border-radius: 0rem;
+        background-color: var(--neutral-100);
+        color: var(--neutral-800);
+        
+          &:is(:focus, :active) {
+          background-color: var(--neutral-200, #f6f8f9);
+          color: var(--accent-400);
+          border-color: none;
+          border: none;
+    }
+      }
+  
+      button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        
+        color: var(--neutral-900, #202427);
+        background-color: var(--neutral-200, #f6f8f9);
+        border: none;
+        border-radius: 0.25rem;
+  
+        &:is(:hover, :focus, :active) {
+          background-color: var(--accent-100);
+          color: var(--neutral-600);
+          border-color: var(--neutral-600);
+    }
+      }
+  
+      .checkbox {
+        display: flex;
+        align-items: center;
+        gap: $space-4;
+  
+        input {
+          width: auto;
+        }
+      }
+    }
+  </style>

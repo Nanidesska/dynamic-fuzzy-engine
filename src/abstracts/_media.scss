@@ -38,15 +38,19 @@
 			position: fixed;
 			z-index: 3;
 			right: 40px;
-			top: 20px;
+			top: 16px;
 			cursor: pointer;
 			transition: all 0.5s ease-out;
 			@media (min-width : 600px) and (max-width : 1100px)  { 
 				right: 25px;
 				top: 2px;
 			}
-			@media (max-width : 600px)  { 
+			@media (min-width : 300px) and (max-width : 600px)  { 
 				right: 20px;
+				top: 2.5px;
+			}
+			@media (max-width : 300px)  { 
+				right: 35px;
 				top: 2.5px;
 			}
 			
@@ -99,15 +103,34 @@
 			width: 100%;
 			
 			visibility: hidden;
-			
-			@media (min-width: 600px) and (max-width: 1100px) {
+			@media (min-width: 1000px) and (max-width: 1100px) {
+				top: -0.2px;
+				right: 0;
+				width: 100%;
+			}
+			@media (min-width: 600px) and (max-width: 1000px) {
 				top: 0;
 				right: 0;
 				width: 100%;
 			}
-			@media (max-width: 600px) {
+			@media (min-width: 500px) and (max-width: 600px) {
+				top: 0rem;
+				right: 0;
+				width: 100%;
+			}
+			@media (min-width: 400px) and (max-width: 500px) {
+				top: -0.5rem;
+				right: 0;
+				width: 100%;
+			}
+			@media (min-width: 300px) and (max-width: 400px) {
 				top: -5rem;
 				right: 0;
+				width: 100%;
+			}
+			@media (max-width: 300px) {
+				top: -5rem;
+				right: 0.7rem;
 				width: 100%;
 			}
 		}
