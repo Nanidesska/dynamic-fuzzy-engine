@@ -10,8 +10,26 @@
       
       <body>
         <div id="results"></div>
-        <a href="/guestsurvey"> Back to Form</a>
+        <a href="/guestsurvey" > Back to Form</a>
+        
         <script>
+            // const dataList = []
+
+            // function addDataToList() {
+            // const name = document.getElementById('name')
+            // const { value } = name
+            // dataList.push(value)
+            // }
+
+            // function downloadFile() {
+            // const textFile = btoa(dataList.join('\n'))
+            // const saveElement = document.createElement('a')
+            // saveElement.href = `data:text/plain;base64,${textFile}`
+            // saveElement.download = 'results.txt'
+            // document.body.appendChild(saveElement)
+            // saveElement.click()
+            // document.body.removeChild(saveElement)
+            // }
             const resultsList = document.getElementById('results')
             new URLSearchParams(window.location.search).forEach((value,name)=>{
                 resultsList.append(name + ": ")
@@ -19,7 +37,7 @@
                 resultsList.append(document.createElement('br'))
             })
         </script>
-
+        
       </body>
 
 </html>

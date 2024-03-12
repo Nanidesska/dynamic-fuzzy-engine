@@ -6,15 +6,15 @@
     height: 2.3rem;
     border-radius: 50%;
     background: none;
-    border: 0.3rem solid white;
+    border: 1px solid rgb(237, 147, 162);
     
 }
 .timeline-dash {
     width: calc(100%/2);
     height: 15rem;
-    border-right: 0.3rem dashed white;
+    border-right: 0.1rem dashed white;
     margin-top: 0.1rem;
-    margin-left: 0.15rem;
+    margin-left: 0.03rem;
     
     background: none;
     align-items: left;
@@ -23,9 +23,9 @@
 .timeline-solid {
     width: calc(100%/2);
     height: 15rem;
-    border-right: 0.3rem solid white;
+    border-right: 0.1rem solid white;
     margin-top: 0.1rem;
-    margin-left: 0.15rem;
+    margin-left: 0.03rem;
     
     background: none;
     align-items: left;
@@ -33,10 +33,10 @@
 
 .timeline-dash-phone1 {
     width: calc(100%/2);
-    height: 38rem;
-    border-right: 3px dashed white;
+    height: 33rem;
+    border-right: 1px dashed white;
     
-    margin-left: 1.5px;
+    margin-left: 0.5px;
     
     background: none;
     align-items: left;
@@ -56,9 +56,9 @@
 .timeline-dash-phone2 {
     width: calc(100%/2);
     height: 47rem;
-    border-right: 3px dashed white;
+    border-right: 1px dashed white;
     
-    margin-left: 1.5px;
+    margin-left: 0.5px;
     
     background: none;
     align-items: left;
@@ -77,9 +77,9 @@
 .timeline-dash-phone3 {
     width: calc(100%/2);
     height: 42rem;
-    border-right: 3px dashed white;
+    border-right: 1px dashed white;
     
-    margin-left: 1.5px;
+    margin-left: 0.5px;
     
     background: none;
     align-items: left;
@@ -98,9 +98,9 @@
 .timeline-dash-phone4 {
     width: calc(100%/2);
     height: 17.6rem;
-    border-right: 3px dashed white;
+    border-right: 1px dashed white;
     
-    margin-left: 1.5px;
+    margin-left: 0.5px;
     
     background: none;
     align-items: left;
@@ -119,9 +119,9 @@
 .timeline-solid-phone5 {
     width: calc(100%/2);
     height: 13.5rem;
-    border-right: 3px solid white;
+    border-right: 1px solid white;
     
-    margin-left: 1.5px;
+    margin-left: 0.5px;
     
     background: none;
     align-items: left;

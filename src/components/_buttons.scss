@@ -71,11 +71,6 @@
   padding: 0.4em 2.4em;
   border: $button-border;
   border-radius: 0.25rem;
-
-  &:is(:hover, :focus) {
-    background-color: var(--gray-medium);
-    color: $button-accent-color-hover;
-  }
 }
 
 .neutralbuttonbox {
@@ -122,34 +117,6 @@
         line-height: 38px;
          box-shadow: 0px 0px 10px rgb(255, 213, 0), 1px 1px 5px rgb(255, 213, 0), 1px 1px 10px rgba(0, 0, 0, 0.191), 1px 1px 10px rgb(255, 196, 0);
       }
-    }
-}
-
-.neonYellowStatic {
-  list-style: none;
-
-  a { display: inline-block;
-      background-color: rgb(255, 255, 255);
-      border: 1px solid rgb(255, 208, 0);
-      height: 55px;
-      width: 150px;
-      padding-top: 0.24rem;
-      
-      text-align: center;
-      color: $clr-neutral-900;
-      
-      
-      display: inline-block;
-      text-decoration: none;
-
-      
-      box-shadow: 0px 0px 5px rgb(255, 221, 0), 0px 0px 10px rgb(255, 208, 0), 1px 1px 10px rgba(0, 0, 0, 0.115), 1px 1px 15px rgba(0, 0, 0, 0.315);
-        
-      font-weight: bolder;
-      height: 55px;
-      width: 150px;
-      line-height: 45px;
-      opacity: 0.7;
     }
 }
 
@@ -209,17 +176,28 @@
     }
 }
 
-@keyframes NeonYellow {
-  0% {  
-    height: 55px;
-    width: 150px;
-    line-height: 45px;
-    }
-  100% { 
-      height: 55px;
+.neonYellowstatic {
+  list-style: none;
+
+  a { display: flex;
+      background-color: rgb(255, 255, 255);
+      height: 40px;
       width: 150px;
-      line-height: 45px;
-         box-shadow: -1px -1px 5px rgba(255, 234, 0, 0.434), 1px 1px 10px rgba(255, 225, 0, 0.518), 1px 1px 5px rgb(255, 225, 0), 1px 1px 10px rgb(255, 225, 0), 1px 1px 5px rgba(255, 225, 0, 0.411); }
+      line-height: 30px;
+      text-align: center;
+      padding-top: 0.24rem;
+      
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.432), 1px 1px 10px rgba(0, 0, 0, 0.468);
+      
+      transition: transform .3s ease-out;
+      display: inline-block;
+      text-decoration: none;
+
+      color: $clr-neutral-900; 
+      animation: NeonYellow 4s ;
+      animation-iteration-count: infinite;
+      
+    }
 }
 
 @keyframes NeonPink {
@@ -233,5 +211,19 @@
     width: 120px;
     line-height: 30px;
       box-shadow: -2px -2px 20px rgb(255, 106, 205), 2px 2px 20px rgb(255, 2, 171), -2px -2px 5px rgb(255, 2, 171), 2px 2px 5px rgb(255, 2, 171), 1px 1px 5px rgb(255, 2, 171);
+       }
+}
+
+@keyframes NeonYellow {
+  0% {  
+    height: 40px;
+    width: 120px;
+      line-height: 30px;
+    }
+  100% { 
+    height: 40px;
+    width: 120px;
+    line-height: 30px;
+      box-shadow: -2px -2px 20px rgb(255, 233, 106), 2px 2px 20px rgb(255, 242, 2), -2px -2px 5px rgb(255, 242, 2), 2px 2px 5px rgb(255, 242, 2), 1px 1px 5px rgb(255, 242, 2);
        }
 }

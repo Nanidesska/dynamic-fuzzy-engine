@@ -18,7 +18,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
         </div>
       </div>
       <div class="inner__form space-content" style="font-family: Cinzel">
-        <form class="login-form space-content" method="FORM" id="guestSurvey" action="/results.php">
+        <form class="login-form space-content" method="get" id="guestSurvey" action="/guestsurvey" >
           <div class="login-form__controls">
                 <label for="name" id="label-name">
 				            <div style="font-family: Cinzel">Full name *</div>
@@ -103,8 +103,8 @@ import FormsLayout from '../layouts/FormsLayout.astro';
 
                 <p style=“line-height: 80%“></br></p>
                 
-                <button id="submitbutton" class="" type="submit" value="Submit" onclick="test()">
-                    <div style="font-family: Cinzel" class="accentbuttonbox">
+                <button id="submitbutton" class="" type="submit" value="Submit">
+                    <div style="font-family: Cinzel" class="accentbuttonbox" >
                           Submit
                     </div>
                 </button>
@@ -132,25 +132,25 @@ import FormsLayout from '../layouts/FormsLayout.astro';
   <div class="login">
     <div class="login__inner reveal h-screen">
       <div class="inner__brand">
-        <div class="brand__text" style="font-family: Cinzel; margin-top: 2rem; ">
+        <div class="brand__text" style="font-family: Roboto; margin-top: 2rem; ">
           
             <span>Guest survey</span><br>
             <span> To make the best out of the day, some information on your attendance would be very helpful. Thank you for your participation!</span>
           
         </div>
       </div>
-      <div class="inner__form space-content" style="font-family: Cinzel">
+      <div class="inner__form space-content" style="font-family: Roboto">
         <form class="login-form space-content" method="POST" id="guestSurvey" action="/guestsurvey">
           <div class="login-form__controls">
                 <label for="name" id="label-name">
-				            <div style="font-family: Cinzel; font-size: 0.9rem;">Full name *</div>
+				            <div style="font-family: Roboto; font-size: 0.9rem;">Full name *</div>
 			          </label>
 			          <div style="font-family:none;"> <input name="name" type="text" id="name" required /></div>
 
                 <p style=“line-height: 80%“></br></p>
 
                 <label id="label-join-phone">
-                    <div style="font-family: Cinzel; font-size: 0.9rem;">Are you joining our wedding? *
+                    <div style="font-family: Roboto; font-size: 0.9rem;">Are you joining our wedding? *
                     </div>
                 </label>
                 <select name="join-phone" id="join-phone" required>
@@ -162,7 +162,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
                 <p style=“line-height: 80%“></br></p>
 
                 <label for="partner-phone" id="label-partner-phone">
-                    <div style="font-family: Cinzel; font-size: 0.9rem;">Are you bringing your partner? *</div>
+                    <div style="font-family: Roboto; font-size: 0.9rem;">Are you bringing your partner? *</div>
                 </label>
                 <select name="partner-phone" id="partner-phone" required>
                   <option hidden disabled selected value style="font-size: 0.9rem;">Please choose an option</option>
@@ -174,7 +174,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
                 <p style=“line-height: 80%“></br></p>
 
                 <label for="children-phone" id="label-children-phone">
-                    <div style="font-family: Cinzel; font-size: 0.9rem;"> Are you bringing your child(ren)? *</div>
+                    <div style="font-family: Roboto; font-size: 0.9rem;"> Are you bringing your child(ren)? *</div>
                 </label>
                 <select name="children-phone" id="children-phone" required>
                   <option hidden disabled selected value style="font-size: 0.9rem;">Please choose an option</option>
@@ -187,7 +187,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
                 <p style=“line-height: 80%“></br></p>
   
                 <label for="childrenage-phone" id="label-childrenage-phone">
-                <div class="" style="font-family: Cinzel; font-size: 0.9rem;">If yes, how old?</div>
+                <div class="" style="font-family: Roboto; font-size: 0.9rem;">If yes, how old?</div>
 			          </label>
                 
 			          <div class="" style="font-family:none;"> 
@@ -197,7 +197,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
                 <p style=“line-height: 80%“></br></p>
 
                 <label for="travel-phone" id="label-travel-phone">
-                  <div style="font-family: Cinzel; font-size: 0.9rem;">If yes, how are you traveling? *</div>
+                  <div style="font-family: Roboto; font-size: 0.9rem;">If yes, how are you traveling? *</div>
               </label>
               <select name="travel-phone" id="label-travel-phone" required>
                 <option hidden disabled selected value style="font-size: 0.9rem;">Please choose an option</option>
@@ -208,7 +208,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
               <p style=“line-height: 80%“></br></p>
 
                 <label for="hotel-phone" id="label-hotel-phone">
-                    <div style="font-family: Cinzel; font-size: 0.9rem;"> Do you want to have a hotel room near Flintsbach? *</div>
+                    <div style="font-family: Roboto; font-size: 0.9rem;"> Do you want to have a hotel room near Flintsbach? *</div>
                 </label>
                 <select name="hotel-phone" id="hotel-phone" required >
                   <option hidden disabled selected value style="font-size: 0.9rem;">Please choose an option</option>
@@ -219,14 +219,14 @@ import FormsLayout from '../layouts/FormsLayout.astro';
                 <p style=“line-height: 80%“></br></p>
 
                 <label for="food-phone" id="label-food-phone">
-				        <div class="clr-neutral-400" style="font-family: Cinzel; font-size: 0.9rem;">Let us know if you have any dining specification(s).</div>
+				        <div class="clr-neutral-400" style="font-family: Roboto; font-size: 0.9rem;">Let us know if you have any dining specification(s).</div>
 			          </label>
 			          <div style="font-family:none;"> <input type="text" name="food-phone" id="food-phone" /></div>
 
                 <p style=“line-height: 80%“></br></p>
                 
                 <button id="submitbutton-phone" class="" type="submit" value="Submit" onclick="test()">
-                    <div style="font-family: Cinzel" class="accentbuttonbox">
+                    <div style="font-family: Roboto" class="accentbuttonboxnohover">
                           Submit
                     </div>
                 </button>
@@ -235,7 +235,7 @@ import FormsLayout from '../layouts/FormsLayout.astro';
 
     </div>
     <div class="login__footer text-neutral-700 ">
-        <h5 class="heading-5" style="font-family: Cinzel">
+        <h5 class="heading-5" style="font-family: Roboto">
         <span>Thank you!</span>
         </h5>
     </div>

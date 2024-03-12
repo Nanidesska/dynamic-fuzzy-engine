@@ -26,6 +26,7 @@
     "@fontsource/monofett": "^5.0.18",
     "@fontsource/monoton": "^5.0.17",
     "@fontsource/pinyon-script": "^5.0.17",
+    "@fontsource/roboto": "^5.0.8",
     "@fontsource/twinkle-star": "^5.0.17",
     "@fontsource/yanone-kaffeesatz": "^5.0.17",
     "accessible-astro-components": "^2.3.1",
